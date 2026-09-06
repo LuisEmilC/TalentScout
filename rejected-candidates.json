@@ -1,0 +1,33 @@
+{
+  "updatedAt": "2026-09-06",
+  "policy": "Candidates are never published unless all 7 verification controls pass and unresolved conflicts are absent.",
+  "candidates": [
+    {
+      "name": "Jessi Da Silva",
+      "country": "Belgium",
+      "club": "Club Brugge",
+      "reason": "Niet gepubliceerd: in deze run kon de kandidaat niet met minimaal 7 afzonderlijke controles en voldoende onafhankelijke openbare bronnen worden bevestigd.",
+      "failedControl": "7-voudige verificatie / brononafhankelijkheid",
+      "supportingSources": ["UEFA"],
+      "checkedAt": "2026-09-06"
+    },
+    {
+      "name": "Naim Amengai",
+      "country": "Belgium",
+      "club": "Club Brugge",
+      "reason": "Niet gepubliceerd: in deze run kon de kandidaat niet met minimaal 7 afzonderlijke controles en voldoende onafhankelijke openbare bronnen worden bevestigd.",
+      "failedControl": "7-voudige verificatie / brononafhankelijkheid",
+      "supportingSources": ["UEFA"],
+      "checkedAt": "2026-09-06"
+    },
+    {
+      "name": "Noah Adedeji-Sternberg",
+      "country": "Belgium",
+      "club": "KRC Genk",
+      "reason": "Niet gepubliceerd: in deze run kon de kandidaat niet met minimaal 7 afzonderlijke controles en voldoende onafhankelijke openbare bronnen worden bevestigd.",
+      "failedControl": "7-voudige verificatie / brononafhankelijkheid",
+      "supportingSources": ["UEFA"],
+      "checkedAt": "2026-09-06"
+    }
+  ]
+}
