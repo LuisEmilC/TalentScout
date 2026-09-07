@@ -1,0 +1,29 @@
+{
+  "runAt": "2026-09-07T19:52:00+02:00",
+  "regionOrder": ["Europe", "Asia", "North America", "South America", "Africa", "Oceania"],
+  "summary": {
+    "published": 1,
+    "rejected": 7,
+    "existingPlayersPreserved": true
+  },
+  "published": [
+    {
+      "name": "Van Fitzharris",
+      "country": "New Zealand",
+      "club": "Auckland FC",
+      "age": 18,
+      "position": "Aanvallende middenvelder",
+      "verification": "7/7 passed; no unresolved conflict"
+    }
+  ],
+  "rejected": [
+    {"name": "Jovesa Uqe", "country": "Fiji", "club": "Labasa FC", "reason": "Onopgelost clubstatus-conflict tussen actuele bronnen."},
+    {"name": "Gilberto Mora", "country": "Mexico", "club": "Club Tijuana", "reason": "Voldoet niet aan minder-bekende talentenfilter."},
+    {"name": "David Tita", "country": "Papua New Guinea", "club": "Papua New Guinea U19 / nationale jeugdcontext", "reason": "Onvoldoende onafhankelijke bronnen voor volledige 7-voudige verificatie."},
+    {"name": "Jayroll Patty", "country": "Solomon Islands", "club": "Solomon Kings FC", "reason": "Volledige leeftijd-, identiteit-, club- en bronverificatie niet compleet."},
+    {"name": "Luc de Fougerolles", "country": "Belgium", "club": "Dender EH", "reason": "Voldoet niet aan minder-bekende talentenfilter."},
+    {"name": "Jessi Da Silva", "country": "Belgium", "club": "Club Brugge", "reason": "7-voudige verificatie niet bevestigd."},
+    {"name": "Naim Amengai", "country": "Belgium", "club": "Club Brugge", "reason": "7-voudige verificatie niet bevestigd."}
+  ],
+  "verificationNotes": "Publicatie bevat alleen kandidaten die alle zeven controles halen. Bestaande geldige spelers zijn behouden. De volledige afwijzingsdetails staan in rejected-candidates.json."
+}
