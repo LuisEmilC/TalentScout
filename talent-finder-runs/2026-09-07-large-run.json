@@ -1,0 +1,34 @@
+{
+  "runStartedAt": "2026-09-07T19:52:00+02:00",
+  "runCompletedAt": "2026-09-07T19:58:00+02:00",
+  "runType": "large multi-region scouting run",
+  "regionOrder": ["Europe", "Asia", "North America", "South America", "Africa", "Oceania"],
+  "scope": "Broad public-source search across as many available countries and candidates as possible within this run window.",
+  "verificationPolicy": "Minimum 7 separate controls per candidate; official sources prioritized; unresolved contradictions block publication.",
+  "candidatesScreened": 16,
+  "approvedPlayers": [
+    {
+      "name": "Van Fitzharris",
+      "country": "New Zealand",
+      "club": "Auckland FC",
+      "result": "published in verified-players.json",
+      "checksPassed": 7,
+      "supportingSources": ["Auckland FC", "New Zealand Football", "Tauranga City AFC", "Transfermarkt", "Sofascore", "Flashscore", "Soccerway", "FotMob"]
+    }
+  ],
+  "rejectedPlayers": [
+    {"name":"Jovesa Uqe","country":"Fiji","club":"Labasa FC","reason":"Unresolved current-club conflict between sources","failedControl":"no unresolved contradictions"},
+    {"name":"Gilberto Mora","country":"Mexico","club":"Club Tijuana","reason":"Too well-known for lesser-known talent filter","failedControl":"scoutfilter"},
+    {"name":"David Tita","country":"Papua New Guinea","club":"PNG U19 context","reason":"Insufficient independent sources for full 7-fold verification","failedControl":"7-fold verification"},
+    {"name":"Jayroll Patty","country":"Solomon Islands","club":"Solomon Kings FC","reason":"Incomplete age/identity/competition source set","failedControl":"7-fold verification"},
+    {"name":"Luc de Fougerolles","country":"Belgium","club":"Dender EH","reason":"Too established for lesser-known talent filter","failedControl":"scoutfilter"},
+    {"name":"Finn Inglethorpe","country":"England","club":"Liverpool FC academy","reason":"Academy evidence was strong, but not enough independent public sources in this run to complete all 7 checks","failedControl":"7-fold verification"},
+    {"name":"Fynn Schenten","country":"Germany","club":"1. FC Köln","reason":"Strong official evidence, but not enough independent public sources in this run to complete all 7 checks","failedControl":"7-fold verification"},
+    {"name":"James Overy","country":"Australia","club":"Sydney FC","reason":"Candidate is already highly visible and established for the lesser-known filter","failedControl":"scoutfilter"},
+    {"name":"Denner Evangelista","country":"Brazil","club":"Corinthians / Chelsea transition","reason":"No longer clearly playing in the relevant country after transfer context","failedControl":"currently playing in country"}
+  ],
+  "existingPlayersPreserved": 6,
+  "unexpectedDeletions": false,
+  "jsonValid": true,
+  "notes": "No additional candidate was published unless every control was satisfied. Existing verified players were retained. Rejected candidates remain in rejected-candidates.json."
+}
