@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-09-07",
   "policy": "Candidates are never published unless all 7 verification controls pass and unresolved conflicts are absent.",
   "candidates": [
     {
       "name": "Jessi Da Silva",
       "country": "Belgium",
       "club": "Club Brugge",
-      "reason": "Niet gepubliceerd: in deze run kon de kandidaat niet met minimaal 7 afzonderlijke controles en voldoende onafhankelijke openbare bronnen worden bevestigd.",
+      "reason": "Niet gepubliceerd: minimaal 7 afzonderlijke controles en voldoende onafhankelijke openbare bronnen konden niet worden bevestigd.",
       "failedControl": "7-voudige verificatie / brononafhankelijkheid",
       "supportingSources": ["UEFA"],
       "checkedAt": "2026-09-06"
@@ -15,7 +15,7 @@
       "name": "Naim Amengai",
       "country": "Belgium",
       "club": "Club Brugge",
-      "reason": "Niet gepubliceerd: in deze run kon de kandidaat niet met minimaal 7 afzonderlijke controles en voldoende onafhankelijke openbare bronnen worden bevestigd.",
+      "reason": "Niet gepubliceerd: minimaal 7 afzonderlijke controles en voldoende onafhankelijke openbare bronnen konden niet worden bevestigd.",
       "failedControl": "7-voudige verificatie / brononafhankelijkheid",
       "supportingSources": ["UEFA"],
       "checkedAt": "2026-09-06"
@@ -24,10 +24,55 @@
       "name": "Noah Adedeji-Sternberg",
       "country": "Belgium",
       "club": "KRC Genk",
-      "reason": "Niet gepubliceerd: in deze run kon de kandidaat niet met minimaal 7 afzonderlijke controles en voldoende onafhankelijke openbare bronnen worden bevestigd.",
+      "reason": "Niet gepubliceerd: minimaal 7 afzonderlijke controles en voldoende onafhankelijke openbare bronnen konden niet worden bevestigd.",
       "failedControl": "7-voudige verificatie / brononafhankelijkheid",
       "supportingSources": ["UEFA"],
       "checkedAt": "2026-09-06"
+    },
+    {
+      "name": "Jovesa Uqe",
+      "country": "Fiji",
+      "club": "Labasa FC",
+      "reason": "Niet gepubliceerd: meerdere bronnen bevestigen Labasa, maar een actuele Sofascore-profielweergave gaf geen club weer. Daardoor bleef een bronconflict onopgelost.",
+      "failedControl": "geen onopgeloste bronconflicten",
+      "supportingSources": ["Fiji Football Association", "OFC", "Transfermarkt", "Flashscore", "Sofascore", "FBC News", "Fiji Sun", "BeSoccer"],
+      "checkedAt": "2026-09-07"
+    },
+    {
+      "name": "Gilberto Mora",
+      "country": "Mexico",
+      "club": "Club Tijuana",
+      "reason": "Niet gepubliceerd in deze run: kandidaat is inmiddels te bekend voor de minder-bekende talentenfilter; er was daarom geen reden om de publicatiedrempel voor deze run te passeren.",
+      "failedControl": "scoutfilter: minder bekend talent",
+      "supportingSources": ["Club Tijuana", "CONCACAF", "La Jornada", "N+"],
+      "checkedAt": "2026-09-07"
+    },
+    {
+      "name": "David Tita",
+      "country": "Papua New Guinea",
+      "club": "Papua New Guinea U19 / nationale jeugdcontext",
+      "reason": "Niet gepubliceerd: sterke bevestiging van recente U19-prestaties, maar onvoldoende onafhankelijke bronnen voor een volledige 7-voudige spelers- en clubverificatie.",
+      "failedControl": "7-voudige verificatie / brononafhankelijkheid",
+      "supportingSources": ["OFC", "The National"],
+      "checkedAt": "2026-09-07"
+    },
+    {
+      "name": "Jayroll Patty",
+      "country": "Solomon Islands",
+      "club": "Solomon Kings FC",
+      "reason": "Niet gepubliceerd: clubdeelname kon worden bevestigd, maar de volledige set van leeftijds-, identiteit-, competitie- en onafhankelijke broncontroles was niet compleet genoeg.",
+      "failedControl": "7-voudige verificatie / brononafhankelijkheid",
+      "supportingSources": ["OFC Pro League", "Sofascore", "OFC U19 context"],
+      "checkedAt": "2026-09-07"
+    },
+    {
+      "name": "Luc de Fougerolles",
+      "country": "Belgium",
+      "club": "Dender EH",
+      "reason": "Niet gepubliceerd in deze run: kandidaat voldoet niet aan de minder-bekende talentenfilter voor deze run.",
+      "failedControl": "scoutfilter: minder bekend talent",
+      "supportingSources": ["CONCACAF", "Dender/Fulham context", "Wikipedia", "FCUpdate"],
+      "checkedAt": "2026-09-07"
     }
   ]
 }
