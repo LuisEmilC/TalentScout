@@ -120,6 +120,35 @@
       "sources": ["UEFA", "Sofascore"],
       "verification": {"status": "verified", "checkedAt": "2026-09-06"},
       "country": "Belgium"
+    },
+    {
+      "id": "official:auckland-fc:van-fitzharris",
+      "name": "Van Fitzharris",
+      "age": 18,
+      "club": "Auckland FC",
+      "position": "Aanvallende middenvelder",
+      "nationality": "New Zealand",
+      "appearances": 3,
+      "minutes": 49,
+      "goals": 0,
+      "assists": 0,
+      "previousClubs": ["Auckland FC Reserves", "Tauranga City AFC"],
+      "competition": "A-League Men / OFC Pro League",
+      "sources": ["Auckland FC", "New Zealand Football", "Tauranga City AFC", "Transfermarkt", "Sofascore", "Flashscore", "Soccerway", "FotMob"],
+      "verification": {
+        "status": "verified",
+        "checkedAt": "2026-09-07",
+        "checksPassed": [
+          "identity and date of birth",
+          "current club",
+          "currently playing in New Zealand",
+          "age eligibility",
+          "position and player profile",
+          "senior match participation",
+          "independent source consistency"
+        ]
+      },
+      "country": "New Zealand"
     }
   ]
 }
