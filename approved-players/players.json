@@ -20,12 +20,22 @@
       "marketValue": null,
       "height": 192,
       "contract": "30 juni 2031",
-      "previousClubs": ["RSC Anderlecht", "RSCA Futures U23"],
+      "previousClubs": [
+        "RSC Anderlecht",
+        "RSCA Futures U23"
+      ],
       "competition": "Bundesliga / Europese en nationale competities",
       "yellowCards": null,
       "redCards": null,
-      "sources": ["TSG Hoffenheim", "Bundesliga", "Sofascore"],
-      "verification": {"status": "verified", "checkedAt": "2026-09-06"},
+      "sources": [
+        "TSG Hoffenheim",
+        "Bundesliga",
+        "Sofascore"
+      ],
+      "verification": {
+        "status": "verified",
+        "checkedAt": "2026-09-06"
+      },
       "country": "Germany"
     },
     {
@@ -48,8 +58,13 @@
       "competition": "UEFA",
       "yellowCards": 1,
       "redCards": 0,
-      "sources": ["UEFA"],
-      "verification": {"status": "verified", "checkedAt": "2026-09-06"},
+      "sources": [
+        "UEFA"
+      ],
+      "verification": {
+        "status": "verified",
+        "checkedAt": "2026-09-06"
+      },
       "country": "Belgium"
     },
     {
@@ -67,12 +82,21 @@
       "marketValue": "€1.2M",
       "height": 178,
       "contract": "30 juni 2029",
-      "previousClubs": ["RSCA Futures U23"],
+      "previousClubs": [
+        "RSCA Futures U23"
+      ],
       "competition": "UEFA Europa League",
       "yellowCards": 0,
       "redCards": 0,
-      "sources": ["UEFA", "Sofascore", "Pro League"],
-      "verification": {"status": "verified", "checkedAt": "2026-09-06"},
+      "sources": [
+        "UEFA",
+        "Sofascore",
+        "Pro League"
+      ],
+      "verification": {
+        "status": "verified",
+        "checkedAt": "2026-09-06"
+      },
       "country": "Belgium"
     },
     {
@@ -90,12 +114,20 @@
       "marketValue": "€620K",
       "height": null,
       "contract": "30 juni 2027",
-      "previousClubs": ["Jong KRC Genk U23"],
+      "previousClubs": [
+        "Jong KRC Genk U23"
+      ],
       "competition": "Challenger Pro League",
       "yellowCards": 0,
       "redCards": 0,
-      "sources": ["Sofascore", "FBref"],
-      "verification": {"status": "verified", "checkedAt": "2026-09-06"},
+      "sources": [
+        "Sofascore",
+        "FBref"
+      ],
+      "verification": {
+        "status": "verified",
+        "checkedAt": "2026-09-06"
+      },
       "country": "Belgium"
     },
     {
@@ -114,12 +146,20 @@
       "marketValue": "€1M",
       "height": 175,
       "contract": "30 juni 2029",
-      "previousClubs": ["RSCA Futures U23"],
+      "previousClubs": [
+        "RSCA Futures U23"
+      ],
       "competition": "UEFA Europa League",
       "yellowCards": null,
       "redCards": null,
-      "sources": ["UEFA", "Sofascore"],
-      "verification": {"status": "verified", "checkedAt": "2026-09-06"},
+      "sources": [
+        "UEFA",
+        "Sofascore"
+      ],
+      "verification": {
+        "status": "verified",
+        "checkedAt": "2026-09-06"
+      },
       "country": "Belgium"
     },
     {
@@ -133,10 +173,34 @@
       "minutes": 49,
       "goals": 0,
       "assists": 0,
-      "previousClubs": ["Auckland FC Reserves", "Tauranga City AFC"],
+      "previousClubs": [
+        "Auckland FC Reserves",
+        "Tauranga City AFC"
+      ],
       "competition": "A-League Men / OFC Pro League",
-      "sources": ["Auckland FC", "New Zealand Football", "Tauranga City AFC", "Transfermarkt", "Sofascore", "Flashscore", "Soccerway", "FotMob"],
-      "verification": {"status": "verified", "checkedAt": "2026-09-07", "checksPassed": ["identity and date of birth", "current club", "currently playing in New Zealand", "age eligibility", "position and player profile", "senior match participation", "independent source consistency"]},
+      "sources": [
+        "Auckland FC",
+        "New Zealand Football",
+        "Tauranga City AFC",
+        "Transfermarkt",
+        "Sofascore",
+        "Flashscore",
+        "Soccerway",
+        "FotMob"
+      ],
+      "verification": {
+        "status": "verified",
+        "checkedAt": "2026-09-07",
+        "checksPassed": [
+          "identity and date of birth",
+          "current club",
+          "currently playing in New Zealand",
+          "age eligibility",
+          "position and player profile",
+          "senior match participation",
+          "independent source consistency"
+        ]
+      },
       "country": "New Zealand"
     }
   ]

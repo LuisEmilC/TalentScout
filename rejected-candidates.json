@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-08",
   "policy": "Candidates are never published unless all 7 verification controls pass and unresolved conflicts are absent.",
   "candidates": [
     {
@@ -8,7 +8,9 @@
       "club": "Club Brugge",
       "reason": "Niet gepubliceerd: minimaal 7 afzonderlijke controles en voldoende onafhankelijke openbare bronnen konden niet worden bevestigd.",
       "failedControl": "7-voudige verificatie / brononafhankelijkheid",
-      "supportingSources": ["UEFA"],
+      "supportingSources": [
+        "UEFA"
+      ],
       "checkedAt": "2026-09-06"
     },
     {
@@ -17,7 +19,9 @@
       "club": "Club Brugge",
       "reason": "Niet gepubliceerd: minimaal 7 afzonderlijke controles en voldoende onafhankelijke openbare bronnen konden niet worden bevestigd.",
       "failedControl": "7-voudige verificatie / brononafhankelijkheid",
-      "supportingSources": ["UEFA"],
+      "supportingSources": [
+        "UEFA"
+      ],
       "checkedAt": "2026-09-06"
     },
     {
@@ -26,7 +30,9 @@
       "club": "KRC Genk",
       "reason": "Niet gepubliceerd: minimaal 7 afzonderlijke controles en voldoende onafhankelijke openbare bronnen konden niet worden bevestigd.",
       "failedControl": "7-voudige verificatie / brononafhankelijkheid",
-      "supportingSources": ["UEFA"],
+      "supportingSources": [
+        "UEFA"
+      ],
       "checkedAt": "2026-09-06"
     },
     {
@@ -35,7 +41,16 @@
       "club": "Labasa FC",
       "reason": "Niet gepubliceerd: meerdere bronnen bevestigen Labasa, maar een actuele Sofascore-profielweergave gaf geen club weer. Daardoor bleef een bronconflict onopgelost.",
       "failedControl": "geen onopgeloste bronconflicten",
-      "supportingSources": ["Fiji Football Association", "OFC", "Transfermarkt", "Flashscore", "Sofascore", "FBC News", "Fiji Sun", "BeSoccer"],
+      "supportingSources": [
+        "Fiji Football Association",
+        "OFC",
+        "Transfermarkt",
+        "Flashscore",
+        "Sofascore",
+        "FBC News",
+        "Fiji Sun",
+        "BeSoccer"
+      ],
       "checkedAt": "2026-09-07"
     },
     {
@@ -44,7 +59,12 @@
       "club": "Club Tijuana",
       "reason": "Niet gepubliceerd in deze run: kandidaat is inmiddels te bekend voor de minder-bekende talentenfilter; er was daarom geen reden om de publicatiedrempel voor deze run te passeren.",
       "failedControl": "scoutfilter: minder bekend talent",
-      "supportingSources": ["Club Tijuana", "CONCACAF", "La Jornada", "N+"],
+      "supportingSources": [
+        "Club Tijuana",
+        "CONCACAF",
+        "La Jornada",
+        "N+"
+      ],
       "checkedAt": "2026-09-07"
     },
     {
@@ -53,7 +73,10 @@
       "club": "Papua New Guinea U19 / nationale jeugdcontext",
       "reason": "Niet gepubliceerd: sterke bevestiging van recente U19-prestaties, maar onvoldoende onafhankelijke bronnen voor een volledige 7-voudige spelers- en clubverificatie.",
       "failedControl": "7-voudige verificatie / brononafhankelijkheid",
-      "supportingSources": ["OFC", "The National"],
+      "supportingSources": [
+        "OFC",
+        "The National"
+      ],
       "checkedAt": "2026-09-07"
     },
     {
@@ -62,7 +85,11 @@
       "club": "Solomon Kings FC",
       "reason": "Niet gepubliceerd: clubdeelname kon worden bevestigd, maar de volledige set van leeftijds-, identiteit-, competitie- en onafhankelijke broncontroles was niet compleet genoeg.",
       "failedControl": "7-voudige verificatie / brononafhankelijkheid",
-      "supportingSources": ["OFC Pro League", "Sofascore", "OFC U19 context"],
+      "supportingSources": [
+        "OFC Pro League",
+        "Sofascore",
+        "OFC U19 context"
+      ],
       "checkedAt": "2026-09-07"
     },
     {
@@ -71,8 +98,48 @@
       "club": "Dender EH",
       "reason": "Niet gepubliceerd in deze run: kandidaat voldoet niet aan de minder-bekende talentenfilter voor deze run.",
       "failedControl": "scoutfilter: minder bekend talent",
-      "supportingSources": ["CONCACAF", "Dender/Fulham context", "Wikipedia", "FCUpdate"],
+      "supportingSources": [
+        "CONCACAF",
+        "Dender/Fulham context",
+        "Wikipedia",
+        "FCUpdate"
+      ],
       "checkedAt": "2026-09-07"
+    },
+    {
+      "name": "Kaua Prates",
+      "country": "Brazil",
+      "club": "Cruzeiro (moving to Borussia Dortmund)",
+      "reason": "Official evidence confirms age, club history and youth-international status, but the short session did not produce enough independent current-country/current-club/stat sources to complete all 7 controls without guessing.",
+      "failedControl": "7-fold verification / current club and stats completeness",
+      "supportingSources": [
+        "Borussia Dortmund official",
+        "Cruzeiro context in official transfer report"
+      ],
+      "checkedAt": "2026-09-08"
+    },
+    {
+      "name": "Juma Bah",
+      "country": "Sierra Leone",
+      "club": "FC Augsburg",
+      "reason": "Official club evidence is strong, but he is already a highly visible established professional with recent LaLiga experience and Manchester City transfer history, so he fails the lesser-known filter.",
+      "failedControl": "scoutfilter",
+      "supportingSources": [
+        "FC Augsburg official",
+        "Real Valladolid/Manchester City transfer history referenced by FC Augsburg"
+      ],
+      "checkedAt": "2026-09-08"
+    },
+    {
+      "name": "Bazoumana Touré",
+      "country": "Ivory Coast",
+      "club": "Newcastle United",
+      "reason": "Official profile confirms identity, age and career, but the player is already a high-profile international and recently transferred to Newcastle; he fails the lesser-known filter for this session.",
+      "failedControl": "scoutfilter",
+      "supportingSources": [
+        "Newcastle United official"
+      ],
+      "checkedAt": "2026-09-08"
     }
   ]
 }
