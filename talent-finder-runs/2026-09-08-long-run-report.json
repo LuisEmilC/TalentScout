@@ -1,0 +1,23 @@
+{
+  "runStartedAt": "2026-09-08T16:36:00+02:00",
+  "runType": "long multi-region scouting run",
+  "regionOrder": ["Europe", "Asia", "North America", "South America", "Africa", "Oceania"],
+  "verificationPolicy": "minimum 7 checks; official sources first; unresolved contradictions block publication",
+  "status": "blocked_before_database_write",
+  "candidatesScreened": 1,
+  "approvedPlayers": [],
+  "rejectedPlayers": [
+    {
+      "name": "Kennet Eichhorn",
+      "country": "Germany",
+      "club": "Bayer 04 Leverkusen",
+      "reason": "Candidate review completed, but the database write was blocked by the connected GitHub safety layer; do not publish until the write path is available and the 7-check evidence is revalidated.",
+      "controls": ["identity and date of birth", "current club", "currently playing in Germany", "age eligibility", "position and player profile", "senior match participation", "independent source consistency"],
+      "sources": ["Bayer 04 Leverkusen", "Bundesliga", "Sofascore", "FotMob", "DFB", "Transfermarkt", "Hertha BSC"]
+    }
+  ],
+  "existingPlayersPreserved": true,
+  "unexpectedDeletions": false,
+  "jsonValid": true,
+  "writeVerification": "not completed"
+}
