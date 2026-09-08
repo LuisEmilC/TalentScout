@@ -1,0 +1,119 @@
+name: Speler handmatig toelaten
+
+on:
+  workflow_dispatch:
+    inputs:
+      player_name:
+        description: 'Exacte naam van de afgewezen speler'
+        required: true
+        type: string
+      override_reason:
+        description: 'Waarom mag deze speler toch worden toegelaten?'
+        required: false
+        default: 'Handmatig goedgekeurd door gebruiker'
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Speler toelaten en database bijwerken
+        env:
+          PLAYER_NAME: ${{ inputs.player_name }}
+          OVERRIDE_REASON: ${{ inputs.override_reason }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          rejected_path = Path('rejected-players/players.json')
+          approved_path = Path('approved-players/players.json')
+          verified_path = Path('verified-players.json')
+
+          name = os.environ['PLAYER_NAME'].strip()
+          override_reason = os.environ['OVERRIDE_REASON'].strip() or 'Handmatig goedgekeurd door gebruiker'
+          now = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+
+          rejected = json.loads(rejected_path.read_text(encoding='utf-8'))
+          approved = json.loads(approved_path.read_text(encoding='utf-8'))
+          verified = json.loads(verified_path.read_text(encoding='utf-8'))
+
+          candidates = rejected.get('candidates', [])
+          match = next((c for c in candidates if c.get('name','').strip().lower() == name.lower()), None)
+          if not match:
+              raise SystemExit(f'Geen afgewezen speler gevonden met naam: {name}')
+
+          slug = re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
+          player_id = f'manual:{slug}'
+
+          player = {
+              'id': player_id,
+              'name': match.get('name'),
+              'age': match.get('age'),
+              'club': match.get('club'),
+              'position': match.get('position'),
+              'nationality': match.get('nationality') or match.get('country'),
+              'country': match.get('country'),
+              'sources': match.get('supportingSources', []),
+              'verification': {
+                  'status': 'manual_override',
+                  'checkedAt': now,
+                  'originalStatus': 'rejected',
+                  'originalReason': match.get('reason'),
+                  'originalFailedControl': match.get('failedControl'),
+                  'manualOverrideReason': override_reason
+              }
+          }
+
+          # Add to approved database unless already present.
+          if not any(p.get('name','').strip().lower() == name.lower() for p in approved.get('players', [])):
+              approved.setdefault('players', []).append(player)
+          approved['updatedAt'] = now
+
+          # Add to the app's canonical database unless already present.
+          if not any(p.get('name','').strip().lower() == name.lower() for p in verified.get('players', [])):
+              verified.setdefault('players', []).append(player)
+
+          # Remove from active rejected candidates and retain the audit trail.
+          rejected['candidates'] = [c for c in candidates if c is not match]
+          rejected.setdefault('manualOverrides', []).append({
+              **match,
+              'status': 'manually_approved',
+              'manualApprovedAt': now,
+              'manualOverrideReason': override_reason
+          })
+          rejected['updatedAt'] = now
+
+          rejected_path.write_text(json.dumps(rejected, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          approved_path.write_text(json.dumps(approved, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          verified_path.write_text(json.dumps(verified, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          print(f'OK: {name} is handmatig toegelaten.')
+          print(f'Oorspronkelijke afwijsreden: {match.get("reason")}')
+          print(f'Override: {override_reason}')
+          PY
+
+      - name: Valideer JSON
+        run: |
+          python3 - <<'PY'
+          import json
+          for f in ['rejected-players/players.json', 'approved-players/players.json', 'verified-players.json']:
+              with open(f, encoding='utf-8') as fh:
+                  json.load(fh)
+              print('Valid JSON:', f)
+          PY
+
+      - name: Commit wijzigingen
+        run: |
+          git config user.name 'TalentScout Bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add rejected-players/players.json approved-players/players.json verified-players.json
+          git commit -m "Handmatig goedgekeurde speler toevoegen"
+          git push
