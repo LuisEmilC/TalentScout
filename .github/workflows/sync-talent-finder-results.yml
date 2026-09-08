@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: talent-finder-database-sync
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -16,7 +20,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Sync latest Talent Finder report
         env:
@@ -34,80 +38,94 @@ jobs:
           def save(path, data):
               Path(path).write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-          # Find the newest report changed by this push. This avoids syncing an old report.
+          def names(items, key='name'):
+              return {str(x.get(key, '')).strip().lower() for x in items if isinstance(x, dict) and str(x.get(key, '')).strip()}
+
           before = os.environ.get('BEFORE_SHA', '')
           after = os.environ.get('AFTER_SHA', '')
-          try:
-              changed = subprocess.check_output(
-                  ['git', 'diff', '--name-only', before, after], text=True
-              ).splitlines()
-          except Exception:
-              changed = []
-          reports = [p for p in changed if p.startswith('talent-finder-runs/') and p.endswith('.json')]
+          reports = []
+          if before and after and before != '0000000000000000000000000000000000000000':
+              try:
+                  changed = subprocess.check_output(['git', 'diff', '--name-only', before, after], text=True).splitlines()
+                  reports = [p for p in changed if p.startswith('talent-finder-runs/') and p.endswith('.json')]
+              except Exception as e:
+                  print('Diff lookup failed:', e)
           if not reports:
               reports = [str(p) for p in Path('talent-finder-runs').glob('*.json')]
           if not reports:
               print('Geen Talent Finder rapport gevonden; niets te synchroniseren.')
               raise SystemExit(0)
 
-          reports.sort()
+          reports.sort(key=lambda p: Path(p).stat().st_mtime)
           report_path = Path(reports[-1])
           report = load(report_path)
-          status = report.get('status', '')
+          status = str(report.get('status', '')).strip()
 
-          # A technical database-write block is NOT a player rejection.
-          # Leave all player databases untouched until a successful report is produced.
+          # Technical write failures are never player rejections.
           if status == 'blocked_before_database_write':
-              print(f'Overgeslagen: {report_path} meldt een technische write-block.')
-              print('Geen speler wordt hierdoor automatisch afgewezen of gepubliceerd.')
+              print(f'OVERGESLAGEN: {report_path} bevat een technische write-block.')
+              print('Geen speler wordt hierdoor afgewezen of gepubliceerd.')
               raise SystemExit(0)
+
+          approved_items = report.get('approvedPlayers', []) or []
+          rejected_items = report.get('rejectedPlayers', []) or []
+          if not isinstance(approved_items, list) or not isinstance(rejected_items, list):
+              raise SystemExit('Rapport bevat geen geldige approvedPlayers/rejectedPlayers arrays.')
+
+          # Every approved player must explicitly carry seven passed checks and at least two sources.
+          # The report's controls list is not accepted as proof of passed checks.
+          required_checks = 7
+          for item in approved_items:
+              if not isinstance(item, dict):
+                  raise SystemExit('Ongeldig approvedPlayers-record.')
+              checks = item.get('checksPassed')
+              sources = item.get('sources') or item.get('supportingSources')
+              if not isinstance(checks, list) or len(checks) < required_checks:
+                  raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} heeft geen expliciete 7+ checksPassed.")
+              if not isinstance(sources, list) or len(sources) < 2:
+                  raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} heeft minder dan 2 bronnen.")
+              if item.get('verificationStatus', 'verified') != 'verified' and item.get('verification', {}).get('status') != 'verified':
+                  raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} is niet expliciet verified.")
 
           approved = load('approved-players/players.json')
           verified = load('verified-players.json')
           rejected = load('rejected-candidates.json')
           rejected_players = load('rejected-players/players.json')
-
+          for db, label in [(approved,'approved'),(verified,'verified'),(rejected,'rejected'),(rejected_players,'rejected-players')]:
+              if not isinstance(db, dict):
+                  raise SystemExit(f'{label}: root moet een object zijn.')
           approved.setdefault('players', [])
           verified.setdefault('players', [])
           rejected.setdefault('candidates', [])
           rejected_players.setdefault('candidates', [])
 
-          run_date = report.get('runStartedAt', '')[:10] or datetime.now(timezone.utc).strftime('%Y-%m-%d')
-          approved_items = report.get('approvedPlayers', []) or []
-          rejected_items = report.get('rejectedPlayers', []) or []
+          baseline_verified = names(verified['players'])
+          baseline_approved = names(approved['players'])
+          run_date = str(report.get('runStartedAt', ''))[:10] or datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
           def name_of(item):
-              return str(item.get('name', '')).strip()
+              return str(item.get('name', '')).strip() if isinstance(item, dict) else ''
 
           def make_player(item):
-              # Keep the report's useful fields while ensuring the app's core schema exists.
               player = dict(item)
               player.setdefault('id', f"talent-finder:{name_of(item).lower().replace(' ', '-')}")
               player.setdefault('nationality', item.get('nationality') or item.get('country'))
               player.setdefault('country', item.get('country'))
               player.setdefault('sources', item.get('sources') or item.get('supportingSources') or [])
+              checks = item.get('checksPassed') or []
               player['verification'] = {
                   'status': 'verified',
                   'checkedAt': run_date,
-                  'checksPassed': item.get('checksPassed') or item.get('controls') or [
-                      'identity and date of birth',
-                      'current club',
-                      'currently playing in relevant country',
-                      'age eligibility',
-                      'position and player profile',
-                      'senior match participation',
-                      'independent source consistency'
-                  ]
+                  'checksPassed': checks
               }
               return player
 
           changed_db = False
 
-          # Approved players are upserted by exact case-insensitive name.
           for item in approved_items:
               name = name_of(item)
               if not name:
-                  continue
+                  raise SystemExit('PUBLICATIE GEBLOKKEERD: approved player zonder naam.')
               player = make_player(item)
               for db in (approved, verified):
                   existing = next((p for p in db['players'] if name_of(p).lower() == name.lower()), None)
@@ -116,18 +134,15 @@ jobs:
                   else:
                       db['players'].append(player)
                   db['updatedAt'] = run_date
-              # If a previously rejected candidate is now approved, remove only the active rejection.
               rejected['candidates'] = [c for c in rejected['candidates'] if name_of(c).lower() != name.lower()]
               rejected_players['candidates'] = [c for c in rejected_players['candidates'] if name_of(c).lower() != name.lower()]
               changed_db = True
 
-          # Genuine rejected candidates are copied to both rejection databases.
           for item in rejected_items:
               name = name_of(item)
               if not name:
                   continue
-              # Never turn a technical error into a rejection.
-              reason = item.get('reason', '')
+              reason = str(item.get('reason', ''))
               if 'write' in reason.lower() and 'blocked' in reason.lower():
                   print(f'Niet toegevoegd als reject: technische write-block bij {name}')
                   continue
@@ -135,7 +150,6 @@ jobs:
               candidate['supportingSources'] = candidate.get('supportingSources') or candidate.get('sources') or []
               candidate['checkedAt'] = candidate.get('checkedAt') or run_date
               candidate.setdefault('failedControl', '7-voudige verificatie')
-
               for db in (rejected, rejected_players):
                   existing = next((c for c in db['candidates'] if name_of(c).lower() == name.lower()), None)
                   if existing:
@@ -145,28 +159,32 @@ jobs:
                   db['updatedAt'] = run_date
               changed_db = True
 
+          # Never silently delete a previously verified/approved player.
+          after_verified = names(verified['players'])
+          after_approved = names(approved['players'])
+          missing_verified = baseline_verified - after_verified
+          missing_approved = baseline_approved - after_approved
+          if missing_verified or missing_approved:
+              raise SystemExit(f'PRESERVATION CHECK FAILED: verified={sorted(missing_verified)} approved={sorted(missing_approved)}')
+
           if not changed_db:
               print('Geen echte databasewijziging uit dit rapport.')
               raise SystemExit(0)
 
-          save('approved-players/players.json', approved)
-          save('verified-players.json', verified)
-          save('rejected-candidates.json', rejected)
-          save('rejected-players/players.json', rejected_players)
-
-          # Final JSON validation and preservation check.
-          for f in [
-              'approved-players/players.json',
-              'verified-players.json',
-              'rejected-candidates.json',
-              'rejected-players/players.json'
+          for f, data in [
+              ('approved-players/players.json', approved),
+              ('verified-players.json', verified),
+              ('rejected-candidates.json', rejected),
+              ('rejected-players/players.json', rejected_players)
           ]:
+              save(f, data)
               load(f)
               print('Valid JSON:', f)
 
           print(f'Gesynchroniseerd rapport: {report_path}')
           print(f'Goedgekeurd toegevoegd/bijgewerkt: {len(approved_items)}')
           print(f'Echte rejects toegevoegd/bijgewerkt: {len(rejected_items)}')
+          print('Preservation check: OK')
           PY
 
       - name: Controleer databasewijzigingen
@@ -174,17 +192,12 @@ jobs:
           python3 - <<'PY'
           import json
           from pathlib import Path
-          files = [
-              'approved-players/players.json',
-              'verified-players.json',
-              'rejected-candidates.json',
-              'rejected-players/players.json'
-          ]
+          files = ['approved-players/players.json','verified-players.json','rejected-candidates.json','rejected-players/players.json']
           for f in files:
               data = json.loads(Path(f).read_text(encoding='utf-8'))
-              print(f, 'OK')
               if not isinstance(data, dict):
                   raise SystemExit(f'{f}: root moet een object zijn')
+              print(f, 'OK')
           PY
 
       - name: Commit database sync
