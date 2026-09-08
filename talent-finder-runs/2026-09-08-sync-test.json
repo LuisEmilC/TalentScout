@@ -1,0 +1,13 @@
+{
+  "runStartedAt": "2026-09-08T21:24:00+02:00",
+  "runType": "database-sync-path-test",
+  "verificationPolicy": "minimum 7 checks; official sources first; unresolved contradictions block publication",
+  "status": "completed_no_changes",
+  "candidatesScreened": 0,
+  "approvedPlayers": [],
+  "rejectedPlayers": [],
+  "existingPlayersPreserved": true,
+  "unexpectedDeletions": false,
+  "jsonValid": true,
+  "writeVerification": "delegated to GitHub Actions sync workflow"
+}
