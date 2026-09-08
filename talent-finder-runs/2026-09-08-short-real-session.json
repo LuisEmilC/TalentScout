@@ -1,0 +1,41 @@
+{
+  "runStartedAt": "2026-09-08T21:31:07+02:00",
+  "runCompletedAt": "2026-09-08T21:36:00+02:00",
+  "runType": "short real multi-region scouting session",
+  "regionOrder": ["Europe", "Asia", "North America", "South America", "Africa", "Oceania"],
+  "scope": "Short worldwide public-source scan across the requested region order.",
+  "verificationPolicy": "Minimum 7 separate controls per candidate; official sources first; unresolved contradictions block publication.",
+  "candidatesScreened": 3,
+  "approvedPlayers": [],
+  "rejectedPlayers": [
+    {
+      "name": "Kaua Prates",
+      "country": "Brazil",
+      "club": "Cruzeiro (moving to Borussia Dortmund)",
+      "reason": "Official evidence confirms age, club history and youth-international status, but the short session did not produce enough independent current-country/current-club/stat sources to complete all 7 controls without guessing.",
+      "failedControl": "7-fold verification / current club and stats completeness",
+      "supportingSources": ["Borussia Dortmund official", "Cruzeiro context in official transfer report"]
+    },
+    {
+      "name": "Juma Bah",
+      "country": "Sierra Leone",
+      "club": "FC Augsburg",
+      "reason": "Official club evidence is strong, but he is already a highly visible established professional with recent LaLiga experience and Manchester City transfer history, so he fails the lesser-known filter.",
+      "failedControl": "scoutfilter",
+      "supportingSources": ["FC Augsburg official", "Real Valladolid/Manchester City transfer history referenced by FC Augsburg"]
+    },
+    {
+      "name": "Bazoumana Touré",
+      "country": "Ivory Coast",
+      "club": "Newcastle United",
+      "reason": "Official profile confirms identity, age and career, but the player is already a high-profile international and recently transferred to Newcastle; he fails the lesser-known filter for this session.",
+      "failedControl": "scoutfilter",
+      "supportingSources": ["Newcastle United official"]
+    }
+  ],
+  "existingPlayersPreserved": 6,
+  "unexpectedDeletions": false,
+  "jsonValid": true,
+  "writeVerification": "pending GitHub Actions sync",
+  "notes": "No player was published because none passed every control with sufficient independent evidence. These are genuine scouting rejections, not technical write failures. Existing verified players must remain unchanged."
+}
