@@ -6,7 +6,7 @@ on:
       - 'talent-finder-runs/**/*.json'
       - 'talent-finder-runs/*.json'
   workflow_run:
-    workflows: ['Talent Finder runner']
+    workflows: ['Talent Finder automatische scouting-runner']
     types: [completed]
   workflow_dispatch:
 
@@ -65,7 +65,6 @@ jobs:
               changed = subprocess.check_output(['git', 'diff', '--name-only', before, after], text=True).splitlines()
               reports = [p for p in changed if p.startswith('talent-finder-runs/') and p.endswith('.json') and '/Run ' not in p]
 
-          # workflow_run and manual dispatch process the newest real report.
           if not reports:
               reports = [str(p) for p in Path('talent-finder-runs').glob('*.json')]
           if not reports:
@@ -176,8 +175,8 @@ jobs:
               name = name_of(item)
               if not name:
                   continue
-              # A rejected player must contain a real verification failure, not a technical error.
-              if str(item.get('reason','')).lower().startswith(('typeerror','connectionerror','timeouterror','urlerror')):
+              reason = str(item.get('reason','')).lower()
+              if any(x in reason for x in ('typeerror','connectionerror','timeouterror','urlerror','technical error','technische fout')):
                   raise SystemExit(f'TECHNISCHE FOUT ONTERECHT ALS REJECT OPGESLAGEN: {name}')
               candidate = dict(item)
               candidate['supportingSources'] = candidate.get('supportingSources') or candidate.get('sources') or []
