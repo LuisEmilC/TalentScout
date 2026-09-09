@@ -1,0 +1,52 @@
+name: Repair technische fouten uit rejected-database
+
+on:
+  push:
+    paths:
+      - 'talent-finder-runner.py'
+      - 'talent-finder-runs/*-automated-run.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Remove technical errors from active rejected lists
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          reports=sorted(Path('talent-finder-runs').glob('*-automated-run.json'),key=lambda p:p.stat().st_mtime)
+          if not reports: raise SystemExit(0)
+          report=json.loads(reports[-1].read_text(encoding='utf-8'))
+          technical={str(x.get('name','')).strip().lower() for x in report.get('runnerErrors',[]) if isinstance(x,dict) and x.get('name')}
+          if not technical:
+              print('Geen technische kandidaten in rejected-database om te repareren.'); raise SystemExit(0)
+          changed=False
+          for fn in ('rejected-candidates.json','rejected-players/players.json'):
+              p=Path(fn); d=json.loads(p.read_text(encoding='utf-8')); old=d.get('candidates',[]); new=[c for c in old if str(c.get('name','')).strip().lower() not in technical]
+              if len(new)!=len(old): changed=True; d['candidates']=new; d['updatedAt']=report.get('runStartedAt','')[:10]; p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8'); print('Gerepareerd:',fn)
+          if not changed: print('Technische kandidaten stonden niet actief in rejected-databases.')
+          PY
+      - name: Validate repaired JSON
+        run: |
+          python3 - <<'PY'
+          import json
+          for f in ('rejected-candidates.json','rejected-players/players.json'):
+              json.load(open(f,encoding='utf-8')); print('Valid JSON:',f)
+          PY
+      - name: Commit repair
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name 'TalentScout Repair Bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add rejected-candidates.json rejected-players/players.json
+          git commit -m 'Remove technical failures from active rejected database'
+          git push
