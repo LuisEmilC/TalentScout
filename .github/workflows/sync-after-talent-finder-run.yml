@@ -1,17 +1,18 @@
-name: Sync na Talent Finder run
+name: Sync na Talent Finder run (handmatig)
 
+# The automatic publication pipeline is now owned by
+# .github/workflows/sync-talent-finder-results.yml.
+# Keep this workflow available as a manual recovery/diagnostic tool, but do not
+# run a second automatic sync against the same report because that can race the
+# primary pipeline and create duplicate Run archives.
 on:
-  workflow_run:
-    workflows: ["Talent Finder automatische scouting-runner"]
-    types: [completed]
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  sync:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+  diagnostic:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -20,93 +21,19 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Validate and sync newest real report
+      - name: Validate newest real report without publishing
         run: |
           python3 - <<'PY'
-          import json,re,subprocess
+          import json
           from pathlib import Path
-          from datetime import datetime,timezone
-
-          def load(p): return json.loads(Path(p).read_text(encoding='utf-8'))
-          def save(p,d):
-              p=Path(p); p.parent.mkdir(parents=True,exist_ok=True)
-              p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-          def name(x): return str(x.get('name','')).strip() if isinstance(x,dict) else ''
-          def names(xs): return {name(x).lower() for x in xs if name(x)}
-          def slug(s): return re.sub(r'[^A-Za-z0-9]+','-',s).strip('-') or 'unknown-player'
-
           reports=sorted(Path('talent-finder-runs').glob('*-automated-run.json'),key=lambda p:p.stat().st_mtime)
           if not reports: raise SystemExit('FOUT: geen automatisch Talent Finder report.')
-          report_path=reports[-1]; report=load(report_path)
-          if report.get('status')!='completed': raise SystemExit('FOUT: laatste run is niet completed.')
-          if report.get('jsonValid') is not True: raise SystemExit('FOUT: report is niet geldig verklaard.')
-
-          approved_items=report.get('approvedPlayers') or []
-          rejected_items=report.get('rejectedPlayers') or []
-          if not isinstance(approved_items,list) or not isinstance(rejected_items,list): raise SystemExit('FOUT: approved/rejected arrays ongeldig.')
-
-          for p in approved_items:
-              if not isinstance(p,dict) or not name(p): raise SystemExit('PUBLICATIE GEBLOKKEERD: ongeldig spelerrecord.')
-              v=p.get('verification') or {}
-              checks=v.get('checksPassed',p.get('checksPassed',[]))
-              check_count=checks if isinstance(checks,int) else len(checks) if isinstance(checks,list) else 0
-              sources=p.get('sources') or p.get('supportingSources') or []
-              if check_count<7: raise SystemExit(f'PUBLICATIE GEBLOKKEERD: {name(p)} < 7 controles.')
-              if len(sources)<2: raise SystemExit(f'PUBLICATIE GEBLOKKEERD: {name(p)} < 2 bronnen.')
-              if v.get('status')!='verified' and p.get('verificationStatus','verified')!='verified': raise SystemExit(f'PUBLICATIE GEBLOKKEERD: {name(p)} niet verified.')
-              for field in ('name','age','nationality','position','club','country'):
-                  if p.get(field) in (None,'',[]): raise SystemExit(f'PUBLICATIE GEBLOKKEERD: {name(p)} mist {field}.')
-
-          approved=load('approved-players/players.json'); verified=load('verified-players.json')
-          if not isinstance(approved,dict) or not isinstance(verified,dict): raise SystemExit('FOUT: database root ongeldig.')
-          approved.setdefault('players',[]); verified.setdefault('players',[])
-          before_a=names(approved['players']); before_v=names(verified['players'])
-          run_date=str(report.get('runStartedAt',''))[:10] or datetime.now(timezone.utc).date().isoformat()
-
-          def normalize(p):
-              q=dict(p); q.setdefault('sources',p.get('supportingSources') or [])
-              v=p.get('verification') or {}
-              checks=v.get('checksPassed',p.get('checksPassed',[]))
-              if isinstance(checks,int): checks=[f'check-{i}' for i in range(1,checks+1)]
-              q['verification']={'status':'verified','checkedAt':run_date,'checksPassed':checks or []}
-              return q
-
-          for item in approved_items:
-              p=normalize(item); n=name(p)
-              for db in (approved,verified):
-                  old=next((x for x in db['players'] if name(x).lower()==n.lower()),None)
-                  if old: old.update(p)
-                  else: db['players'].append(p)
-                  db['updatedAt']=run_date
-
-          if before_a-names(approved['players']) or before_v-names(verified['players']): raise SystemExit('PRESERVATION CHECK FAILED: bestaande speler verdwenen.')
-
-          run_numbers=[]
-          for root in (Path('approved-players'),Path('rejected-players')):
-              if root.exists():
-                  for d in root.iterdir():
-                      m=re.fullmatch(r'Run (\\d+)',d.name)
-                      if m and d.is_dir(): run_numbers.append(int(m.group(1)))
-          run_no=max(run_numbers,default=0)+1; label=f'Run {run_no}'
-          ad=Path('approved-players')/label; rd=Path('rejected-players')/label; ad.mkdir(parents=True,exist_ok=True); rd.mkdir(parents=True,exist_ok=True)
-          meta={'runNumber':run_no,'sourceReport':str(report_path),'runStartedAt':report.get('runStartedAt'),'runCompletedAt':report.get('runCompletedAt'),'status':'completed','approvedPlayers':len(approved_items),'rejectedPlayers':len(rejected_items)}
-          for p in approved_items:
-              n=name(p)
-              if n: save(ad/f'{slug(n)}.json',normalize(p))
-          for p in rejected_items:
-              n=name(p)
-              if n: save(rd/f'{slug(n)}.json',p)
-          save(ad/'run.json',meta); save(rd/'run.json',meta)
-          save('approved-players/players.json',approved); save('verified-players.json',verified)
-          json.loads(Path('approved-players/players.json').read_text()); json.loads(Path('verified-players.json').read_text())
-          print(f'SYNC OK: {report_path} -> verified-players.json + approved-players/players.json; approved={len(approved_items)} rejected={len(rejected_items)}')
+          p=reports[-1]; d=json.loads(p.read_text(encoding='utf-8'))
+          if d.get('jsonValid') is not True: raise SystemExit('FOUT: report is niet geldig JSON verklaard.')
+          print('Laatste report geldig:',p)
+          print('Status:',d.get('status'))
+          print('Kandidaten:',d.get('candidatesScreened'))
+          print('Approved:',len(d.get('approvedPlayers') or []))
+          print('Rejected:',len(d.get('rejectedPlayers') or []))
+          print('Technische fouten:',len(d.get('runnerErrors') or []))
           PY
-
-      - name: Commit synced databases
-        run: |
-          git add approved-players verified-players.json rejected-players talent-finder-runs
-          if git diff --cached --quiet; then echo 'Geen databasewijziging nodig.'; exit 0; fi
-          git config user.name 'TalentScout Database Sync Bot'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Sync Talent Finder run into approved and verified databases'
-          git push
