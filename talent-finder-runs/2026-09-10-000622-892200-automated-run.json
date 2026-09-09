@@ -1,0 +1,5709 @@
+{
+  "runStartedAt": "2026-09-09T21:08:09.966174+00:00",
+  "runCompletedAt": "2026-09-09T22:06:22.892200+00:00",
+  "status": "completed",
+  "runType": "continuous automated real public-source scouting run",
+  "passesCompleted": 6,
+  "countriesScouted": [
+    "Belgium",
+    "Netherlands",
+    "France",
+    "Germany",
+    "Spain",
+    "Portugal",
+    "Italy",
+    "England",
+    "Turkey",
+    "Japan",
+    "South Korea",
+    "India",
+    "Saudi Arabia",
+    "Australia",
+    "New Zealand",
+    "Argentina",
+    "Brazil",
+    "Chile",
+    "Colombia",
+    "Ecuador",
+    "South Africa",
+    "Nigeria",
+    "Ghana",
+    "Morocco",
+    "Egypt",
+    "Mexico",
+    "Canada",
+    "United States",
+    "Costa Rica",
+    "Uruguay",
+    "Paraguay",
+    "Peru",
+    "Bolivia",
+    "Venezuela",
+    "Switzerland",
+    "Austria",
+    "Denmark",
+    "Sweden",
+    "Norway",
+    "Poland",
+    "Czechia",
+    "Croatia",
+    "Serbia",
+    "Greece",
+    "Romania",
+    "Ukraine",
+    "Georgia",
+    "Israel",
+    "Qatar",
+    "United Arab Emirates",
+    "Thailand",
+    "Indonesia",
+    "Malaysia",
+    "Vietnam",
+    "China",
+    "Iran",
+    "Iraq",
+    "Uzbekistan",
+    "Kazakhstan",
+    "Cameroon",
+    "Senegal",
+    "Ivory Coast",
+    "Algeria",
+    "Tunisia",
+    "Kenya",
+    "Tanzania",
+    "Zambia",
+    "Zimbabwe",
+    "Fiji",
+    "Papua New Guinea",
+    "Samoa",
+    "Tonga"
+  ],
+  "candidatesScreened": 156,
+  "approvedPlayers": [],
+  "rejectedPlayers": [],
+  "runnerErrors": [
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138317076",
+      "name": "Adjani Mujangi Bia",
+      "club": "R.S.C. Anderlecht",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135952018",
+      "name": "Q135952018",
+      "club": "Club NXT",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140077848",
+      "name": "Kiyan Achahbar",
+      "club": "Jong Genk",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140078094",
+      "name": "Yhanis Onehese",
+      "club": "SL16 FC",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q137176460",
+      "name": "Xander Dierckx",
+      "club": "Royal Antwerp F.C.",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138529886",
+      "name": "Mattis Seghers",
+      "club": "R.S.C. Anderlecht",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135692995",
+      "name": "Gabriel Biladi",
+      "club": "R.S.C. Anderlecht",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136089540",
+      "name": "Gianluca Okon",
+      "club": "Club NXT",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140985431",
+      "name": "Laciné Megnan-Pavé",
+      "club": "Montpellier Hérault Sport Club",
+      "country": "France",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139714508",
+      "name": "Mezian Mesloub",
+      "club": "F.C. Lorient",
+      "country": "France",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q123443704",
+      "name": "Noë Degouey",
+      "club": "Stade lavallois U17",
+      "country": "France",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q123885789",
+      "name": "Tom Hocdé",
+      "club": "Stade lavallois U17",
+      "country": "France",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q86718410",
+      "name": "Aeron Zinga",
+      "club": "US Orléans",
+      "country": "France",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135686049",
+      "name": "Kennet Eichhorn",
+      "club": "Bayer 04 Leverkusen",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135792471",
+      "name": "Patrik Tørset Johnsen",
+      "club": "RB Leipzig",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134462732",
+      "name": "Cassiano Kiala",
+      "club": "Bayern Munich Junior Team",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140077409",
+      "name": "Ylvi Eisenbeiß",
+      "club": "VfL Wolfsburg",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140073898",
+      "name": "Alina Kerschbaumer",
+      "club": "1. FC Köln",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134271451",
+      "name": "Love Arrhov",
+      "club": "Eintracht Frankfurt",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139661730",
+      "name": "Q139661730",
+      "club": "SSV Ulm 1846",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130776450",
+      "name": "Lennart Karl",
+      "club": "FC Bayern Munich",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139556476",
+      "name": "Ilai Grootfaam",
+      "club": "Feyenoord Rotterdam",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138326667",
+      "name": "Mohamed Abdalla",
+      "club": "Jong Ajax",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140302938",
+      "name": "Gâni Büyükhan",
+      "club": "Fortuna Sittard",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136482691",
+      "name": "Anne Gelevert",
+      "club": "FC Twente",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q132189157",
+      "name": "Aymee Altena",
+      "club": "SC Heerenveen Vrouwen",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136461209",
+      "name": "Aline Weerelts",
+      "club": "FC Utrecht",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q129583043",
+      "name": "Janey Joy van der Mije",
+      "club": "Ajax Talententeam",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139769564",
+      "name": "Ryan Metu",
+      "club": "FC Groningen",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138856529",
+      "name": "Esad Deniz",
+      "club": "Juventus F.C. Next Gen",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q133189496",
+      "name": "Antonio Arena",
+      "club": "AS Roma",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136872636",
+      "name": "Giulia Galli",
+      "club": "A.S. Roma Women",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139244033",
+      "name": "Samuel Wiafe",
+      "club": "Genoa CFC",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136750154",
+      "name": "Olivers Dzentis",
+      "club": "Modena F.C.",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131108438",
+      "name": "Oliver Blini",
+      "club": "Empoli FC",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q132528657",
+      "name": "Louis Buffon",
+      "club": "Pisa SC",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131693296",
+      "name": "Robinho Júnior",
+      "club": "Genoa CFC",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135409315",
+      "name": "Oliver Odell",
+      "club": "Q20053389",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141271456",
+      "name": "Vlad",
+      "club": "F.C. Paços de Ferreira",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135946325",
+      "name": "Q135946325",
+      "club": "S.C. Braga",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136465151",
+      "name": "Thaís Lima",
+      "club": "S.L. Benfica (women)",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135409294",
+      "name": "Oliver Guerreiro",
+      "club": "Imortal DC",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135101604",
+      "name": "Tommy Marqués",
+      "club": "S.C. Braga",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q124954284",
+      "name": "Trafim Mieĺničenka",
+      "club": "FC Porto B",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141223817",
+      "name": "Q141223817",
+      "club": "FC Barcelona B",
+      "country": "Spain",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141223758",
+      "name": "Q141223758",
+      "club": "FC Barcelona B",
+      "country": "Spain",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141242466",
+      "name": "Q141242466",
+      "club": "FC Barcelona B",
+      "country": "Spain",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136481124",
+      "name": "Christian Imga",
+      "club": "Athletic Club",
+      "country": "Spain",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139988851",
+      "name": "Q139988851",
+      "club": "Sevilla FC",
+      "country": "Spain",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136334543",
+      "name": "Sujit Singh",
+      "club": "Mohammedan Sporting Club",
+      "country": "India",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q96094181",
+      "name": "Bikash Yumnam",
+      "club": "Indian Arrows",
+      "country": "India",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q59656505",
+      "name": "Gurkirat Singh",
+      "club": "Indian Arrows",
+      "country": "India",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q85690498",
+      "name": "Alfred Lalroutsang",
+      "club": "NorthEast United FC",
+      "country": "India",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140937305",
+      "name": "Shin Miidera",
+      "club": "Yokohama F. Marinos",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134396766",
+      "name": "Runa Sumiya",
+      "club": "JEF United Chiba Ladies",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130463692",
+      "name": "Atsuro Takahashi",
+      "club": "Urawa Red Diamonds",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130463769",
+      "name": "Masanobu Yoshida",
+      "club": "Urawa Red Diamonds",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130492077",
+      "name": "Ibuki Vincent Junior Ejike",
+      "club": "Sagan Tosu",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136965611",
+      "name": "Niko Shikida",
+      "club": "Nippon TV Tokyo Verdy Beleza",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130503188",
+      "name": "Rikuto Sato",
+      "club": "Montedio Yamagata",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q133943156",
+      "name": "Hina Hirakawa",
+      "club": "Urawa Red Diamonds Ladies",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126683866",
+      "name": "Yoon Do-young",
+      "club": "Daejeon Hana Citizen FC",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126684328",
+      "name": "Yang Min-hyuk",
+      "club": "Gangwon FC",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139941124",
+      "name": "Uh Dam",
+      "club": "Bucheon FC 1995",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126684442",
+      "name": "Jin Tae-ho",
+      "club": "Jeonbuk Hyundai Motors FC",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q128580177",
+      "name": "Kim Yoo-sung",
+      "club": "Gangwon FC",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q117277515",
+      "name": "Kim Ji-soo",
+      "club": "Seongnam FC",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q119432246",
+      "name": "Lee Sang-min",
+      "club": "Daejeon Hana Citizen FC",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138308037",
+      "name": "Ali Aras Şenyurt",
+      "club": "Sarıyer G.K.",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138003324",
+      "name": "Mehmet Faruk Canpolat",
+      "club": "Çankaya FK",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136750215",
+      "name": "Yağız Akcan",
+      "club": "Nazilli Belediyespor",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136750213",
+      "name": "Eren Mert Karadağ",
+      "club": "Nazilli Belediyespor",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136297677",
+      "name": "Yiğit Baynazoğlu",
+      "club": "Sivasspor",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138003313",
+      "name": "Oğuzhan Yurtdaş",
+      "club": "Manisa FK",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138106854",
+      "name": "Ahmet Akif İnci",
+      "club": "Esenler Erokspor",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138003310",
+      "name": "Şahan Aslan",
+      "club": "Van Büyükşehir Belediyespor",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126043751",
+      "name": "Mateo Apolonio Berruezo",
+      "club": "Deportivo Riestra",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140078744",
+      "name": "Q140078744",
+      "club": "Club Atlético River Plate",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q137883472",
+      "name": "Giovanni Baroni",
+      "club": "Talleres de Córdoba",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126884637",
+      "name": "Santino Crego",
+      "club": "Estudiantes de La Plata",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q116046410",
+      "name": "Julieta Martínez",
+      "club": "Club Atlético Lanús women",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136396797",
+      "name": "Matías Magdaleno",
+      "club": "Estudiantes de La Plata",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q125215803",
+      "name": "Benjamín Sagüés Barreiro",
+      "club": "Estudiantes de La Plata",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q116254155",
+      "name": "Constanza Jacquet",
+      "club": "Club Atlético Independiente Women",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134607676",
+      "name": "Mathew Baker",
+      "club": "Melbourne City FC",
+      "country": "Australia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139881655",
+      "name": "Rubi Sullivan",
+      "club": "Sydney FC",
+      "country": "Australia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q132177890",
+      "name": "Amlani Tatu",
+      "club": "Adelaide United Football Club",
+      "country": "Australia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139882170",
+      "name": "Georgia Ritchie",
+      "club": "Canberra United FC",
+      "country": "Australia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126284348",
+      "name": "Jayden Necovski",
+      "club": "Melbourne City FC",
+      "country": "Australia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q133105064",
+      "name": "Lucas Herrington",
+      "club": "Australia men's national soccer team",
+      "country": "Australia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138000112",
+      "name": "Pia Vlok",
+      "club": "Three Kings United",
+      "country": "New Zealand",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136548419",
+      "name": "Eamonn McCarron",
+      "club": "Wellington Phoenix FC",
+      "country": "New Zealand",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134697101",
+      "name": "Jayden Smith",
+      "club": "Wellington Phoenix FC",
+      "country": "New Zealand",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134931872",
+      "name": "Jeremy Foo",
+      "club": "Auckland City FC",
+      "country": "New Zealand",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131328657",
+      "name": "Saba Al-Yahya",
+      "club": "Al Qadsiah FC",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130608084",
+      "name": "Maram Al-Yahya",
+      "club": "Al Qadsiah FC",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130233006",
+      "name": "Basma Al-Shenaifi",
+      "club": "Al Nassr FC",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q125441270",
+      "name": "Layan Al-Yafei",
+      "club": "Al Ittihad FC",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q124104177",
+      "name": "Fatimah Mansour",
+      "club": "Al-Shabab Football Club",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q125425799",
+      "name": "Munirah Al-Ghanam",
+      "club": "Al Qadsiah FC",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131323763",
+      "name": "Randa Al-Abdulqader",
+      "club": "Al Qadsiah FC",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130386301",
+      "name": "Majd Al-Otaibi",
+      "club": "Al Hilal SFC (women)",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140028106",
+      "name": "Yasmim Cardozo",
+      "club": "Clube de Regatas do Flamengo",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134070771",
+      "name": "Ivan Molina",
+      "club": "Botafogo F.R.",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131624705",
+      "name": "Olivia Yoshi",
+      "club": "Nacional Atlético Clube",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130737892",
+      "name": "Oliver Martins de Figueiredo",
+      "club": "S.C. Internacional",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q115332579",
+      "name": "Estevão",
+      "club": "Sociedade Esportiva Palmeiras",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131342038",
+      "name": "David Miguel",
+      "club": "Cuiabá Esporte Clube",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q119152074",
+      "name": "Riquelme Fillipi",
+      "club": "Sociedade Esportiva Palmeiras",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q23927905",
+      "name": "Tomás Sierra",
+      "club": "Club Deportivo Universidad Católica",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q125454038",
+      "name": "Martín Mundaca",
+      "club": "Coquimbo Unido",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q110549800",
+      "name": "Jordhy Thompson",
+      "club": "Club Social y Deportivo Colo Colo",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q123591430",
+      "name": "Maximiliano Gutiérrez",
+      "club": "Club Deportivo Huachipato",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q110805295",
+      "name": "Darío Yutronic",
+      "club": "Club Universidad de Chile",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q118352058",
+      "name": "Bruno Betancor",
+      "club": "Everton de Viña del Mar",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q73430428",
+      "name": "Paz González",
+      "club": "Club Deportivo Universidad Católica Femenino",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q125428019",
+      "name": "David Retamal",
+      "club": "Club Universidad de Chile",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136192529",
+      "name": "Éder Smic Valencia",
+      "club": "German Football Academy Popayan",
+      "country": "Colombia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134119875",
+      "name": "Jhon Sevillano",
+      "club": "Atlético Nacional",
+      "country": "Colombia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131835212",
+      "name": "Sintia Cabezas",
+      "club": "América de Cali Femenino",
+      "country": "Colombia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q133260325",
+      "name": "Juan Esteban Castillo",
+      "club": "Deportivo Pereira",
+      "country": "Colombia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138018885",
+      "name": "Royer Caicedo",
+      "club": "Atlético Nacional",
+      "country": "Colombia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q132729812",
+      "name": "Mary Álvarez",
+      "club": "Club Deportivo Formas Íntimas",
+      "country": "Colombia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136222207",
+      "name": "Ricardo Caleño",
+      "club": "Q130341254",
+      "country": "Ecuador",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131620811",
+      "name": "Oliver Lopez",
+      "club": "América de Quito",
+      "country": "Ecuador",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q127502468",
+      "name": "Justin Cornejo",
+      "club": "Barcelona S.C.",
+      "country": "Ecuador",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q120727286",
+      "name": "Jeremy Batioja",
+      "club": "Sociedad Deportiva Aucas",
+      "country": "Ecuador",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141148571",
+      "name": "Henry Kwaku Boateng",
+      "club": "Accra Hearts of Oak SC",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141267908",
+      "name": "Benjamin Tsivanyo",
+      "club": "Aduana Stars",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141267626",
+      "name": "Humaid Fuseini",
+      "club": "Heart of Lions F.C.",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141149256",
+      "name": "Prince Tweneboah",
+      "club": "Basake Holy Stars Football Club",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134776211",
+      "name": "Blessing Dankwah",
+      "club": "Accra Lions FC",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139269881",
+      "name": "Dominic Frimpong",
+      "club": "Aduana Stars",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141149320",
+      "name": "Frank Abora Duku",
+      "club": "Accra Hearts of Oak SC",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q118582849",
+      "name": "Abdelhamid Ait Boudlal",
+      "club": "Mohammed VI Football Academy",
+      "country": "Morocco",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136486067",
+      "name": "Hakim Mesbahi",
+      "club": "FAR Rabat",
+      "country": "Morocco",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140225785",
+      "name": "Hajar Saïd",
+      "club": "AS FAR",
+      "country": "Morocco",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130301496",
+      "name": "Yassir Zabiri",
+      "club": "Union de Touarga",
+      "country": "Morocco",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136526443",
+      "name": "Younes El Bahraoui",
+      "club": "KACM",
+      "country": "Morocco",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q124172029",
+      "name": "El Mehdi Maouhoub",
+      "club": "FUS de Rabat",
+      "country": "Morocco",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140312195",
+      "name": "Noel Etim",
+      "club": "Remo Stars F.C.",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q137545284",
+      "name": "Ebenezer Harcourt",
+      "club": "Sporting Lagos F.C.",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140558768",
+      "name": "David Benjamin",
+      "club": "Rivers United F.C.",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140614621",
+      "name": "Fatima Oloko",
+      "club": "Abia Angels F.C.",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135196842",
+      "name": "Chukwuamaka Osigwe",
+      "club": "Edo Queens F.C.",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135197274",
+      "name": "Linda Jiwuaku",
+      "club": "Bayelsa Queens",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135479947",
+      "name": "Joy Igbokwe",
+      "club": "Naija Ratels",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126598582",
+      "name": "Aboubakar Idris",
+      "club": "Adamawa United F.C.",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136772062",
+      "name": "Munashe Mugwara",
+      "club": "Mamelodi Sundowns Ladies FC",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136772080",
+      "name": "Katleho Malebana",
+      "club": "Mamelodi Sundowns Ladies FC",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140610419",
+      "name": "Zoë October",
+      "club": "University of Western Cape Women's FC",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136952140",
+      "name": "Lazola Maku",
+      "club": "Siwelele F.C.",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136771987",
+      "name": "Jabulile Mbatha",
+      "club": "Mamelodi Sundowns Ladies FC",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136386350",
+      "name": "Kutlwano Lethlaku",
+      "club": "Mamelodi Sundowns F.C.",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130629637",
+      "name": "Asekho Tiwani",
+      "club": "Mamelodi Sundowns F.C.",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136558226",
+      "name": "Neo Rapoo",
+      "club": "Siwelele F.C.",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    }
+  ],
+  "technicalUnresolved": [
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138317076",
+      "name": "Adjani Mujangi Bia",
+      "club": "R.S.C. Anderlecht",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135952018",
+      "name": "Q135952018",
+      "club": "Club NXT",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140077848",
+      "name": "Kiyan Achahbar",
+      "club": "Jong Genk",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140078094",
+      "name": "Yhanis Onehese",
+      "club": "SL16 FC",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q137176460",
+      "name": "Xander Dierckx",
+      "club": "Royal Antwerp F.C.",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138529886",
+      "name": "Mattis Seghers",
+      "club": "R.S.C. Anderlecht",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135692995",
+      "name": "Gabriel Biladi",
+      "club": "R.S.C. Anderlecht",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136089540",
+      "name": "Gianluca Okon",
+      "club": "Club NXT",
+      "country": "Belgium",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140985431",
+      "name": "Laciné Megnan-Pavé",
+      "club": "Montpellier Hérault Sport Club",
+      "country": "France",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139714508",
+      "name": "Mezian Mesloub",
+      "club": "F.C. Lorient",
+      "country": "France",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q123443704",
+      "name": "Noë Degouey",
+      "club": "Stade lavallois U17",
+      "country": "France",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q123885789",
+      "name": "Tom Hocdé",
+      "club": "Stade lavallois U17",
+      "country": "France",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q86718410",
+      "name": "Aeron Zinga",
+      "club": "US Orléans",
+      "country": "France",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135686049",
+      "name": "Kennet Eichhorn",
+      "club": "Bayer 04 Leverkusen",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135792471",
+      "name": "Patrik Tørset Johnsen",
+      "club": "RB Leipzig",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134462732",
+      "name": "Cassiano Kiala",
+      "club": "Bayern Munich Junior Team",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140077409",
+      "name": "Ylvi Eisenbeiß",
+      "club": "VfL Wolfsburg",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140073898",
+      "name": "Alina Kerschbaumer",
+      "club": "1. FC Köln",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134271451",
+      "name": "Love Arrhov",
+      "club": "Eintracht Frankfurt",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139661730",
+      "name": "Q139661730",
+      "club": "SSV Ulm 1846",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130776450",
+      "name": "Lennart Karl",
+      "club": "FC Bayern Munich",
+      "country": "Germany",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139556476",
+      "name": "Ilai Grootfaam",
+      "club": "Feyenoord Rotterdam",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138326667",
+      "name": "Mohamed Abdalla",
+      "club": "Jong Ajax",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140302938",
+      "name": "Gâni Büyükhan",
+      "club": "Fortuna Sittard",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136482691",
+      "name": "Anne Gelevert",
+      "club": "FC Twente",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q132189157",
+      "name": "Aymee Altena",
+      "club": "SC Heerenveen Vrouwen",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136461209",
+      "name": "Aline Weerelts",
+      "club": "FC Utrecht",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q129583043",
+      "name": "Janey Joy van der Mije",
+      "club": "Ajax Talententeam",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139769564",
+      "name": "Ryan Metu",
+      "club": "FC Groningen",
+      "country": "Netherlands",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138856529",
+      "name": "Esad Deniz",
+      "club": "Juventus F.C. Next Gen",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q133189496",
+      "name": "Antonio Arena",
+      "club": "AS Roma",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136872636",
+      "name": "Giulia Galli",
+      "club": "A.S. Roma Women",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139244033",
+      "name": "Samuel Wiafe",
+      "club": "Genoa CFC",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136750154",
+      "name": "Olivers Dzentis",
+      "club": "Modena F.C.",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131108438",
+      "name": "Oliver Blini",
+      "club": "Empoli FC",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q132528657",
+      "name": "Louis Buffon",
+      "club": "Pisa SC",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131693296",
+      "name": "Robinho Júnior",
+      "club": "Genoa CFC",
+      "country": "Italy",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135409315",
+      "name": "Oliver Odell",
+      "club": "Q20053389",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141271456",
+      "name": "Vlad",
+      "club": "F.C. Paços de Ferreira",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135946325",
+      "name": "Q135946325",
+      "club": "S.C. Braga",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136465151",
+      "name": "Thaís Lima",
+      "club": "S.L. Benfica (women)",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135409294",
+      "name": "Oliver Guerreiro",
+      "club": "Imortal DC",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135101604",
+      "name": "Tommy Marqués",
+      "club": "S.C. Braga",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q124954284",
+      "name": "Trafim Mieĺničenka",
+      "club": "FC Porto B",
+      "country": "Portugal",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141223817",
+      "name": "Q141223817",
+      "club": "FC Barcelona B",
+      "country": "Spain",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141223758",
+      "name": "Q141223758",
+      "club": "FC Barcelona B",
+      "country": "Spain",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141242466",
+      "name": "Q141242466",
+      "club": "FC Barcelona B",
+      "country": "Spain",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136481124",
+      "name": "Christian Imga",
+      "club": "Athletic Club",
+      "country": "Spain",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139988851",
+      "name": "Q139988851",
+      "club": "Sevilla FC",
+      "country": "Spain",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136334543",
+      "name": "Sujit Singh",
+      "club": "Mohammedan Sporting Club",
+      "country": "India",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q96094181",
+      "name": "Bikash Yumnam",
+      "club": "Indian Arrows",
+      "country": "India",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q59656505",
+      "name": "Gurkirat Singh",
+      "club": "Indian Arrows",
+      "country": "India",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q85690498",
+      "name": "Alfred Lalroutsang",
+      "club": "NorthEast United FC",
+      "country": "India",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140937305",
+      "name": "Shin Miidera",
+      "club": "Yokohama F. Marinos",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134396766",
+      "name": "Runa Sumiya",
+      "club": "JEF United Chiba Ladies",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130463692",
+      "name": "Atsuro Takahashi",
+      "club": "Urawa Red Diamonds",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130463769",
+      "name": "Masanobu Yoshida",
+      "club": "Urawa Red Diamonds",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130492077",
+      "name": "Ibuki Vincent Junior Ejike",
+      "club": "Sagan Tosu",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136965611",
+      "name": "Niko Shikida",
+      "club": "Nippon TV Tokyo Verdy Beleza",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130503188",
+      "name": "Rikuto Sato",
+      "club": "Montedio Yamagata",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q133943156",
+      "name": "Hina Hirakawa",
+      "club": "Urawa Red Diamonds Ladies",
+      "country": "Japan",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126683866",
+      "name": "Yoon Do-young",
+      "club": "Daejeon Hana Citizen FC",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126684328",
+      "name": "Yang Min-hyuk",
+      "club": "Gangwon FC",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139941124",
+      "name": "Uh Dam",
+      "club": "Bucheon FC 1995",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126684442",
+      "name": "Jin Tae-ho",
+      "club": "Jeonbuk Hyundai Motors FC",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q128580177",
+      "name": "Kim Yoo-sung",
+      "club": "Gangwon FC",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q117277515",
+      "name": "Kim Ji-soo",
+      "club": "Seongnam FC",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q119432246",
+      "name": "Lee Sang-min",
+      "club": "Daejeon Hana Citizen FC",
+      "country": "South Korea",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138308037",
+      "name": "Ali Aras Şenyurt",
+      "club": "Sarıyer G.K.",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138003324",
+      "name": "Mehmet Faruk Canpolat",
+      "club": "Çankaya FK",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136750215",
+      "name": "Yağız Akcan",
+      "club": "Nazilli Belediyespor",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136750213",
+      "name": "Eren Mert Karadağ",
+      "club": "Nazilli Belediyespor",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136297677",
+      "name": "Yiğit Baynazoğlu",
+      "club": "Sivasspor",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138003313",
+      "name": "Oğuzhan Yurtdaş",
+      "club": "Manisa FK",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138106854",
+      "name": "Ahmet Akif İnci",
+      "club": "Esenler Erokspor",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138003310",
+      "name": "Şahan Aslan",
+      "club": "Van Büyükşehir Belediyespor",
+      "country": "Turkey",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126043751",
+      "name": "Mateo Apolonio Berruezo",
+      "club": "Deportivo Riestra",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140078744",
+      "name": "Q140078744",
+      "club": "Club Atlético River Plate",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": false,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q137883472",
+      "name": "Giovanni Baroni",
+      "club": "Talleres de Córdoba",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126884637",
+      "name": "Santino Crego",
+      "club": "Estudiantes de La Plata",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q116046410",
+      "name": "Julieta Martínez",
+      "club": "Club Atlético Lanús women",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136396797",
+      "name": "Matías Magdaleno",
+      "club": "Estudiantes de La Plata",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q125215803",
+      "name": "Benjamín Sagüés Barreiro",
+      "club": "Estudiantes de La Plata",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q116254155",
+      "name": "Constanza Jacquet",
+      "club": "Club Atlético Independiente Women",
+      "country": "Argentina",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134607676",
+      "name": "Mathew Baker",
+      "club": "Melbourne City FC",
+      "country": "Australia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139881655",
+      "name": "Rubi Sullivan",
+      "club": "Sydney FC",
+      "country": "Australia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q132177890",
+      "name": "Amlani Tatu",
+      "club": "Adelaide United Football Club",
+      "country": "Australia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139882170",
+      "name": "Georgia Ritchie",
+      "club": "Canberra United FC",
+      "country": "Australia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126284348",
+      "name": "Jayden Necovski",
+      "club": "Melbourne City FC",
+      "country": "Australia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q133105064",
+      "name": "Lucas Herrington",
+      "club": "Australia men's national soccer team",
+      "country": "Australia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138000112",
+      "name": "Pia Vlok",
+      "club": "Three Kings United",
+      "country": "New Zealand",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136548419",
+      "name": "Eamonn McCarron",
+      "club": "Wellington Phoenix FC",
+      "country": "New Zealand",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134697101",
+      "name": "Jayden Smith",
+      "club": "Wellington Phoenix FC",
+      "country": "New Zealand",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134931872",
+      "name": "Jeremy Foo",
+      "club": "Auckland City FC",
+      "country": "New Zealand",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131328657",
+      "name": "Saba Al-Yahya",
+      "club": "Al Qadsiah FC",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130608084",
+      "name": "Maram Al-Yahya",
+      "club": "Al Qadsiah FC",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130233006",
+      "name": "Basma Al-Shenaifi",
+      "club": "Al Nassr FC",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q125441270",
+      "name": "Layan Al-Yafei",
+      "club": "Al Ittihad FC",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q124104177",
+      "name": "Fatimah Mansour",
+      "club": "Al-Shabab Football Club",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q125425799",
+      "name": "Munirah Al-Ghanam",
+      "club": "Al Qadsiah FC",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131323763",
+      "name": "Randa Al-Abdulqader",
+      "club": "Al Qadsiah FC",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130386301",
+      "name": "Majd Al-Otaibi",
+      "club": "Al Hilal SFC (women)",
+      "country": "Saudi Arabia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140028106",
+      "name": "Yasmim Cardozo",
+      "club": "Clube de Regatas do Flamengo",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134070771",
+      "name": "Ivan Molina",
+      "club": "Botafogo F.R.",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131624705",
+      "name": "Olivia Yoshi",
+      "club": "Nacional Atlético Clube",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130737892",
+      "name": "Oliver Martins de Figueiredo",
+      "club": "S.C. Internacional",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q115332579",
+      "name": "Estevão",
+      "club": "Sociedade Esportiva Palmeiras",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131342038",
+      "name": "David Miguel",
+      "club": "Cuiabá Esporte Clube",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q119152074",
+      "name": "Riquelme Fillipi",
+      "club": "Sociedade Esportiva Palmeiras",
+      "country": "Brazil",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q23927905",
+      "name": "Tomás Sierra",
+      "club": "Club Deportivo Universidad Católica",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q125454038",
+      "name": "Martín Mundaca",
+      "club": "Coquimbo Unido",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q110549800",
+      "name": "Jordhy Thompson",
+      "club": "Club Social y Deportivo Colo Colo",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q123591430",
+      "name": "Maximiliano Gutiérrez",
+      "club": "Club Deportivo Huachipato",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q110805295",
+      "name": "Darío Yutronic",
+      "club": "Club Universidad de Chile",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q118352058",
+      "name": "Bruno Betancor",
+      "club": "Everton de Viña del Mar",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q73430428",
+      "name": "Paz González",
+      "club": "Club Deportivo Universidad Católica Femenino",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q125428019",
+      "name": "David Retamal",
+      "club": "Club Universidad de Chile",
+      "country": "Chile",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136192529",
+      "name": "Éder Smic Valencia",
+      "club": "German Football Academy Popayan",
+      "country": "Colombia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134119875",
+      "name": "Jhon Sevillano",
+      "club": "Atlético Nacional",
+      "country": "Colombia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131835212",
+      "name": "Sintia Cabezas",
+      "club": "América de Cali Femenino",
+      "country": "Colombia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q133260325",
+      "name": "Juan Esteban Castillo",
+      "club": "Deportivo Pereira",
+      "country": "Colombia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q138018885",
+      "name": "Royer Caicedo",
+      "club": "Atlético Nacional",
+      "country": "Colombia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q132729812",
+      "name": "Mary Álvarez",
+      "club": "Club Deportivo Formas Íntimas",
+      "country": "Colombia",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136222207",
+      "name": "Ricardo Caleño",
+      "club": "Q130341254",
+      "country": "Ecuador",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q131620811",
+      "name": "Oliver Lopez",
+      "club": "América de Quito",
+      "country": "Ecuador",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q127502468",
+      "name": "Justin Cornejo",
+      "club": "Barcelona S.C.",
+      "country": "Ecuador",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q120727286",
+      "name": "Jeremy Batioja",
+      "club": "Sociedad Deportiva Aucas",
+      "country": "Ecuador",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141148571",
+      "name": "Henry Kwaku Boateng",
+      "club": "Accra Hearts of Oak SC",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141267908",
+      "name": "Benjamin Tsivanyo",
+      "club": "Aduana Stars",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141267626",
+      "name": "Humaid Fuseini",
+      "club": "Heart of Lions F.C.",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141149256",
+      "name": "Prince Tweneboah",
+      "club": "Basake Holy Stars Football Club",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q134776211",
+      "name": "Blessing Dankwah",
+      "club": "Accra Lions FC",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q139269881",
+      "name": "Dominic Frimpong",
+      "club": "Aduana Stars",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q141149320",
+      "name": "Frank Abora Duku",
+      "club": "Accra Hearts of Oak SC",
+      "country": "Ghana",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q118582849",
+      "name": "Abdelhamid Ait Boudlal",
+      "club": "Mohammed VI Football Academy",
+      "country": "Morocco",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136486067",
+      "name": "Hakim Mesbahi",
+      "club": "FAR Rabat",
+      "country": "Morocco",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140225785",
+      "name": "Hajar Saïd",
+      "club": "AS FAR",
+      "country": "Morocco",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130301496",
+      "name": "Yassir Zabiri",
+      "club": "Union de Touarga",
+      "country": "Morocco",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136526443",
+      "name": "Younes El Bahraoui",
+      "club": "KACM",
+      "country": "Morocco",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q124172029",
+      "name": "El Mehdi Maouhoub",
+      "club": "FUS de Rabat",
+      "country": "Morocco",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140312195",
+      "name": "Noel Etim",
+      "club": "Remo Stars F.C.",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q137545284",
+      "name": "Ebenezer Harcourt",
+      "club": "Sporting Lagos F.C.",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140558768",
+      "name": "David Benjamin",
+      "club": "Rivers United F.C.",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140614621",
+      "name": "Fatima Oloko",
+      "club": "Abia Angels F.C.",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135196842",
+      "name": "Chukwuamaka Osigwe",
+      "club": "Edo Queens F.C.",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135197274",
+      "name": "Linda Jiwuaku",
+      "club": "Bayelsa Queens",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135479947",
+      "name": "Joy Igbokwe",
+      "club": "Naija Ratels",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q126598582",
+      "name": "Aboubakar Idris",
+      "club": "Adamawa United F.C.",
+      "country": "Nigeria",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136772062",
+      "name": "Munashe Mugwara",
+      "club": "Mamelodi Sundowns Ladies FC",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136772080",
+      "name": "Katleho Malebana",
+      "club": "Mamelodi Sundowns Ladies FC",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q140610419",
+      "name": "Zoë October",
+      "club": "University of Western Cape Women's FC",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136952140",
+      "name": "Lazola Maku",
+      "club": "Siwelele F.C.",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136771987",
+      "name": "Jabulile Mbatha",
+      "club": "Mamelodi Sundowns Ladies FC",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136386350",
+      "name": "Kutlwano Lethlaku",
+      "club": "Mamelodi Sundowns F.C.",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": false
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q130629637",
+      "name": "Asekho Tiwani",
+      "club": "Mamelodi Sundowns F.C.",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q136558226",
+      "name": "Neo Rapoo",
+      "club": "Siwelele F.C.",
+      "country": "South Africa",
+      "errorType": "SourceTechnicalError",
+      "error": "Sofascore: HTTP Error 403: Forbidden",
+      "checks": {
+        "1_identity": true,
+        "2_age_13_23": true,
+        "3_current_club_wikidata": true,
+        "4_club_and_country": true,
+        "5_independent_player_profile": false,
+        "6_current_club_independent": false,
+        "7_essential_profile_fields_available": true
+      }
+    }
+  ],
+  "existingPlayersPreserved": true,
+  "unexpectedDeletions": false,
+  "jsonValid": true,
+  "writeVerification": "workflow_run sync-after-talent-finder-run",
+  "verificationPolicy": "Exactly 7 main controls; 5/7, 6/7 or 7/7 may pass; 4/7 or lower is rejected; hard contradictions block; minimum 2 independent public sources; technical source failures are runnerErrors, never player rejections; missing optional statistics never block approval."
+}
