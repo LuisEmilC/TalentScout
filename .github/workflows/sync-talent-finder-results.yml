@@ -23,10 +23,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Sync and archive Talent Finder run
+      - name: Sync and validate newest Talent Finder run
         env:
           BEFORE_SHA: ${{ github.event.before }}
           AFTER_SHA: ${{ github.sha }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
           python3 - <<'PY'
           import json, os, re, subprocess
@@ -41,11 +42,11 @@ jobs:
               path.parent.mkdir(parents=True, exist_ok=True)
               path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-          def names(items):
-              return {str(x.get('name', '')).strip().lower() for x in items if isinstance(x, dict) and str(x.get('name', '')).strip()}
-
           def name_of(item):
               return str(item.get('name', '')).strip() if isinstance(item, dict) else ''
+
+          def names(items):
+              return {name_of(x).lower() for x in items if name_of(x)}
 
           def slug(name):
               s = re.sub(r'[^A-Za-z0-9]+', '-', name).strip('-')
@@ -53,45 +54,60 @@ jobs:
 
           before = os.environ.get('BEFORE_SHA', '')
           after = os.environ.get('AFTER_SHA', '')
+          event = os.environ.get('EVENT_NAME', '')
           reports = []
-          if before and after and before != '0000000000000000000000000000000000000000':
-              try:
-                  changed = subprocess.check_output(['git', 'diff', '--name-only', before, after], text=True).splitlines()
-                  reports = [p for p in changed if p.startswith('talent-finder-runs/') and p.endswith('.json') and '/Run ' not in p]
-              except Exception as e:
-                  print('Diff lookup failed:', e)
+
+          # On a normal push, process only reports changed by that push.
+          if event == 'push' and before and after and before != '0000000000000000000000000000000000000000':
+              changed = subprocess.check_output(['git', 'diff', '--name-only', before, after], text=True).splitlines()
+              reports = [p for p in changed if p.startswith('talent-finder-runs/') and p.endswith('.json') and '/Run ' not in p]
+
+          # Manual runs may explicitly process the newest report, but never silently
+          # turn an old report into a new scouting run.
           if not reports:
               reports = [str(p) for p in Path('talent-finder-runs').glob('*.json')]
+
           if not reports:
-              print('Geen Talent Finder rapport gevonden; niets te synchroniseren.')
-              raise SystemExit(0)
+              raise SystemExit('FOUT: geen Talent Finder run-report gevonden.')
 
           reports.sort(key=lambda p: Path(p).stat().st_mtime)
           report_path = Path(reports[-1])
           report = load(report_path)
           status = str(report.get('status', '')).strip()
+          started = str(report.get('runStartedAt', report.get('runAt', ''))).strip()
 
-          # Technical write failures are never player rejections and never create player files.
+          if not started:
+              raise SystemExit(f'FOUT: {report_path} bevat geen runStartedAt/runAt.')
+
+          try:
+              dt = datetime.fromisoformat(started.replace('Z', '+00:00'))
+              age_hours = (datetime.now(timezone.utc) - dt.astimezone(timezone.utc)).total_seconds() / 3600
+          except Exception as e:
+              raise SystemExit(f'FOUT: ongeldige runStartedAt in {report_path}: {e}')
+
+          # A manual retry must never republish an old scouting result.
+          if event != 'push' and age_hours > 24:
+              raise SystemExit(f'FOUT: stale run-report: {report_path} is {age_hours:.1f} uur oud; eerst een nieuwe Talent Finder run uitvoeren.')
+
+          # Technical write blocks are not player rejections and must never create
+          # approved/verified players. Keep the report visible in GitHub instead.
           if status == 'blocked_before_database_write':
-              print(f'OVERGESLAGEN: {report_path} bevat een technische write-block.')
-              raise SystemExit(0)
+              print(f'TECHNISCHE BLOCK: {report_path}')
+              print('Geen speler gepubliceerd. Bestaande databases blijven onaangeraakt.')
+              print('OORZAAK IN RAPPORT:', report.get('rejectedPlayers', []))
+              raise SystemExit(1)
 
           approved_items = report.get('approvedPlayers', report.get('published', [])) or []
           rejected_items = report.get('rejectedPlayers', report.get('rejected', [])) or []
           if not isinstance(approved_items, list) or not isinstance(rejected_items, list):
-              raise SystemExit('Rapport bevat geen geldige approved/rejected arrays.')
+              raise SystemExit('FOUT: rapport bevat geen geldige approved/rejected arrays.')
 
           # Every newly published player must explicitly prove 7+ checks and 2+ sources.
           for item in approved_items:
               if not isinstance(item, dict):
-                  raise SystemExit('Ongeldig approvedPlayers-record.')
+                  raise SystemExit('PUBLICATIE GEBLOKKEERD: ongeldig approvedPlayers-record.')
               checks = item.get('checksPassed')
-              if isinstance(checks, int):
-                  check_count = checks
-              elif isinstance(checks, list):
-                  check_count = len(checks)
-              else:
-                  check_count = 0
+              check_count = checks if isinstance(checks, int) else len(checks) if isinstance(checks, list) else 0
               sources = item.get('sources') or item.get('supportingSources')
               if check_count < 7:
                   raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} heeft minder dan 7 expliciete checks.")
@@ -115,7 +131,7 @@ jobs:
 
           baseline_verified = names(verified['players'])
           baseline_approved = names(approved['players'])
-          run_date = str(report.get('runStartedAt', report.get('runAt', '')))[:10] or datetime.now(timezone.utc).strftime('%Y-%m-%d')
+          run_date = started[:10]
 
           def make_player(item):
               player = dict(item)
@@ -133,7 +149,6 @@ jobs:
               }
               return player
 
-          changed_db = False
           for item in approved_items:
               name = name_of(item)
               if not name:
@@ -148,16 +163,11 @@ jobs:
                   db['updatedAt'] = run_date
               rejected['candidates'] = [c for c in rejected['candidates'] if name_of(c).lower() != name.lower()]
               rejected_players['candidates'] = [c for c in rejected_players['candidates'] if name_of(c).lower() != name.lower()]
-              changed_db = True
 
           real_rejects = []
           for item in rejected_items:
               name = name_of(item)
               if not name:
-                  continue
-              reason = str(item.get('reason', ''))
-              if 'write' in reason.lower() and 'blocked' in reason.lower():
-                  print(f'Niet als reject opgeslagen: technische write-block bij {name}')
                   continue
               candidate = dict(item)
               candidate['supportingSources'] = candidate.get('supportingSources') or candidate.get('sources') or []
@@ -171,15 +181,10 @@ jobs:
                   else:
                       db['candidates'].append(candidate)
                   db['updatedAt'] = run_date
-              changed_db = True
 
-          # Never silently delete a previously verified/approved player.
-          missing_verified = baseline_verified - names(verified['players'])
-          missing_approved = baseline_approved - names(approved['players'])
-          if missing_verified or missing_approved:
-              raise SystemExit(f'PRESERVATION CHECK FAILED: verified={sorted(missing_verified)} approved={sorted(missing_approved)}')
+          if baseline_verified - names(verified['players']) or baseline_approved - names(approved['players']):
+              raise SystemExit('PRESERVATION CHECK FAILED: bestaande geverifieerde/toegelaten speler verdwenen.')
 
-          # Sequential Run number: max existing Run N + 1.
           run_numbers = []
           for root in (Path('approved-players'), Path('rejected-players')):
               if root.exists():
@@ -189,8 +194,6 @@ jobs:
                           run_numbers.append(int(m.group(1)))
           run_number = max(run_numbers, default=0) + 1
           run_label = f'Run {run_number}'
-
-          # Archive the exact result of this run using the same Run number on both sides.
           approved_dir = Path('approved-players') / run_label
           rejected_dir = Path('rejected-players') / run_label
           approved_dir.mkdir(parents=True, exist_ok=True)
@@ -200,7 +203,6 @@ jobs:
               name = name_of(item)
               if name:
                   save(approved_dir / f'{slug(name)}.json', make_player(item))
-
           for item in real_rejects:
               name = name_of(item)
               if name:
@@ -219,7 +221,6 @@ jobs:
           save(approved_dir / 'run.json', run_meta)
           save(rejected_dir / 'run.json', run_meta)
 
-          # Save aggregate databases even when only run archive metadata changed.
           for f, data in [
               ('approved-players/players.json', approved),
               ('verified-players.json', verified),
