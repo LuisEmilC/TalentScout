@@ -5,6 +5,9 @@ on:
     paths:
       - 'talent-finder-runs/**/*.json'
       - 'talent-finder-runs/*.json'
+  workflow_run:
+    workflows: ['Talent Finder runner']
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -16,6 +19,7 @@ concurrency:
 
 jobs:
   sync:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -57,16 +61,13 @@ jobs:
           event = os.environ.get('EVENT_NAME', '')
           reports = []
 
-          # On a normal push, process only reports changed by that push.
           if event == 'push' and before and after and before != '0000000000000000000000000000000000000000':
               changed = subprocess.check_output(['git', 'diff', '--name-only', before, after], text=True).splitlines()
               reports = [p for p in changed if p.startswith('talent-finder-runs/') and p.endswith('.json') and '/Run ' not in p]
 
-          # Manual runs may explicitly process the newest report, but never silently
-          # turn an old report into a new scouting run.
+          # workflow_run and manual dispatch process the newest real report.
           if not reports:
               reports = [str(p) for p in Path('talent-finder-runs').glob('*.json')]
-
           if not reports:
               raise SystemExit('FOUT: geen Talent Finder run-report gevonden.')
 
@@ -75,7 +76,6 @@ jobs:
           report = load(report_path)
           status = str(report.get('status', '')).strip()
           started = str(report.get('runStartedAt', report.get('runAt', ''))).strip()
-
           if not started:
               raise SystemExit(f'FOUT: {report_path} bevat geen runStartedAt/runAt.')
 
@@ -85,16 +85,13 @@ jobs:
           except Exception as e:
               raise SystemExit(f'FOUT: ongeldige runStartedAt in {report_path}: {e}')
 
-          # A manual retry must never republish an old scouting result.
-          if event != 'push' and age_hours > 24:
+          if event not in ('push',) and age_hours > 24:
               raise SystemExit(f'FOUT: stale run-report: {report_path} is {age_hours:.1f} uur oud; eerst een nieuwe Talent Finder run uitvoeren.')
 
-          # Technical write blocks are not player rejections and must never create
-          # approved/verified players. Keep the report visible in GitHub instead.
           if status == 'blocked_before_database_write':
               print(f'TECHNISCHE BLOCK: {report_path}')
               print('Geen speler gepubliceerd. Bestaande databases blijven onaangeraakt.')
-              print('OORZAAK IN RAPPORT:', report.get('rejectedPlayers', []))
+              print('Runner errors:', report.get('runnerErrors', []))
               raise SystemExit(1)
 
           approved_items = report.get('approvedPlayers', report.get('published', [])) or []
@@ -102,19 +99,27 @@ jobs:
           if not isinstance(approved_items, list) or not isinstance(rejected_items, list):
               raise SystemExit('FOUT: rapport bevat geen geldige approved/rejected arrays.')
 
-          # Every newly published player must explicitly prove 7+ checks and 2+ sources.
+          # EXACTLY 7 main controls. 5/7, 6/7 or 7/7 may pass. 4/7 or less fails.
           for item in approved_items:
               if not isinstance(item, dict):
                   raise SystemExit('PUBLICATIE GEBLOKKEERD: ongeldig approvedPlayers-record.')
-              checks = item.get('checksPassed')
+              verification = item.get('verification') or {}
+              main_count = verification.get('mainControlCount', item.get('mainControlCount', 0))
+              if main_count != 7:
+                  raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} heeft niet exact 7 hoofdcontroles.")
+              controls = verification.get('controls')
+              if not isinstance(controls, dict) or len(controls) != 7:
+                  raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} heeft geen exact 7 controle-uitkomsten.")
+              checks = verification.get('checksPassed', item.get('checksPassed'))
               check_count = checks if isinstance(checks, int) else len(checks) if isinstance(checks, list) else 0
+              if check_count < 5 or check_count > 7:
+                  raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} heeft geen geldige 5/7-7/7 score.")
               sources = item.get('sources') or item.get('supportingSources')
-              if check_count < 7:
-                  raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} heeft minder dan 7 expliciete checks.")
               if not isinstance(sources, list) or len(sources) < 2:
-                  raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} heeft minder dan 2 bronnen.")
-              verification = item.get('verification', {})
-              if item.get('verificationStatus', 'verified') != 'verified' and verification.get('status') != 'verified':
+                  raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} heeft minder dan 2 onafhankelijke bronnen.")
+              if verification.get('hardConflict') is True:
+                  raise SystemExit(f"PUBLICATIE GEBLOKKEERD: harde tegenstrijdigheid bij {item.get('name', '')}.")
+              if verification.get('status') != 'verified':
                   raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} is niet expliciet verified.")
 
           approved = load('approved-players/players.json')
@@ -139,13 +144,15 @@ jobs:
               player.setdefault('nationality', item.get('nationality') or item.get('country'))
               player.setdefault('country', item.get('country'))
               player.setdefault('sources', item.get('sources') or item.get('supportingSources') or [])
-              checks = item.get('checksPassed')
-              if isinstance(checks, int):
-                  checks = [f'check-{i}' for i in range(1, checks + 1)]
+              verification = item.get('verification') or {}
+              passed = verification.get('checksPassed', item.get('checksPassed', []))
+              if isinstance(passed, int):
+                  passed = [f'check-{i}' for i in range(1, passed + 1)]
               player['verification'] = {
                   'status': 'verified',
                   'checkedAt': run_date,
-                  'checksPassed': checks or []
+                  'checksPassed': passed,
+                  'mainControlCount': 7
               }
               return player
 
@@ -169,6 +176,9 @@ jobs:
               name = name_of(item)
               if not name:
                   continue
+              # A rejected player must contain a real verification failure, not a technical error.
+              if str(item.get('reason','')).lower().startswith(('typeerror','connectionerror','timeouterror','urlerror')):
+                  raise SystemExit(f'TECHNISCHE FOUT ONTERECHT ALS REJECT OPGESLAGEN: {name}')
               candidate = dict(item)
               candidate['supportingSources'] = candidate.get('supportingSources') or candidate.get('sources') or []
               candidate['checkedAt'] = candidate.get('checkedAt') or run_date
@@ -237,6 +247,7 @@ jobs:
           print(f'Goedgekeurd: {len(approved_items)}')
           print(f'Echte rejects: {len(real_rejects)}')
           print('Preservation check: OK')
+          print('Database sync voorbereiding: OK')
           PY
 
       - name: Validate all TalentScout JSON databases
