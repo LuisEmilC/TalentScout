@@ -52,25 +52,42 @@ jobs:
           print('Geldig nieuw report:',reports[-1])
           PY
 
-      - name: Commit new scouting report with retry
+      - name: Preserve report for conflict-safe push
+        run: |
+          set -e
+          reports=(talent-finder-runs/*-automated-run.json)
+          test -f "${reports[-1]}"
+          cp "${reports[-1]}" /tmp/talentscout-latest-run.json
+          printf '%s\n' "${reports[-1]}" > /tmp/talentscout-latest-run-path.txt
+
+      - name: Commit new scouting report with conflict-safe retry
         run: |
           set -e
           git config user.name 'TalentScout Talent Finder Bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          REPORT_PATH=$(cat /tmp/talentscout-latest-run-path.txt)
+          REPORT_BASENAME=$(basename "$REPORT_PATH")
           for attempt in 1 2 3 4 5; do
-            git add talent-finder-runs/*-automated-run.json
+            git fetch origin main
+            git rebase origin/main
+            mkdir -p talent-finder-runs
+            cp /tmp/talentscout-latest-run.json "talent-finder-runs/$REPORT_BASENAME"
+            git add "talent-finder-runs/$REPORT_BASENAME"
             if git diff --cached --quiet; then
-              echo 'FOUT: geen nieuw Talent Finder report.'
+              if git ls-tree -r HEAD --name-only | grep -Fxq "talent-finder-runs/$REPORT_BASENAME"; then
+                echo "Report staat al op GitHub na een gelijktijdige push; doorgaan als succes."
+                exit 0
+              fi
+              echo 'FOUT: nieuw report heeft geen wijziging opgeleverd.'
               exit 1
             fi
-            git commit -m 'Run automated Talent Finder scouting scan' || true
+            git commit -m 'Run automated Talent Finder scouting scan'
             if git push origin HEAD:main; then
               echo "Report succesvol naar GitHub geschreven (poging $attempt)."
               exit 0
             fi
-            echo "Push-conflict (poging $attempt); remote wordt opgehaald en report-commit wordt opnieuw gebased."
-            git fetch origin main
-            git rebase origin/main
+            echo "Push-conflict (poging $attempt); opnieuw ophalen en report opnieuw toepassen."
+            git rebase --abort 2>/dev/null || true
             sleep $((attempt * 2))
           done
           echo 'FOUT: report kon na 5 pogingen niet naar GitHub worden geschreven.'
