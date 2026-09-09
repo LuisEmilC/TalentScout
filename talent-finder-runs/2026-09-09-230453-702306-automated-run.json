@@ -1,0 +1,48 @@
+{
+  "runStartedAt": "2026-09-09T21:03:42.180506+00:00",
+  "runCompletedAt": "2026-09-09T21:04:53.702306+00:00",
+  "status": "completed",
+  "runType": "automated real public-source scouting run",
+  "regionOrder": [
+    "Europe",
+    "Asia",
+    "North America",
+    "South America",
+    "Africa",
+    "Oceania"
+  ],
+  "countriesScouted": [
+    "Fiji",
+    "Papua New Guinea",
+    "Samoa",
+    "Tonga"
+  ],
+  "scope": "Young lesser-known players currently attached to clubs in the selected countries, not selected by nationality.",
+  "verificationPolicy": "Exactly 7 main controls: identity, age 13-23, current club in Wikidata, club/country, independent player profile, independent current club, essential profile fields. 5/7, 6/7 or 7/7 may pass; 4/7 or lower is rejected. Evidence subchecks do not create extra main controls. Minimum 2 independent public sources. Hard contradictions block publication. Technical errors are stored in runnerErrors and are never converted into player rejections.",
+  "candidatesScreened": 1,
+  "approvedPlayers": [],
+  "rejectedPlayers": [
+    {
+      "id": "candidate:Q111363926",
+      "name": "Nabil Begg",
+      "country": "Fiji",
+      "club": "Ba F.C.",
+      "reason": "minder dan 2 onafhankelijke bronnen",
+      "failedControls": [
+        "5_independent_player_profile",
+        "6_current_club_independent"
+      ],
+      "checksPerformed": 7,
+      "checksPassed": 5,
+      "mainControlCount": 7,
+      "supportingSources": [
+        "Wikidata"
+      ]
+    }
+  ],
+  "runnerErrors": [],
+  "existingPlayersPreserved": true,
+  "unexpectedDeletions": false,
+  "jsonValid": true,
+  "writeVerification": "workflow_run sync-after-talent-finder-run"
+}
