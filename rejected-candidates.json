@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08",
+  "updatedAt": "2026-09-09",
   "policy": "Candidates are never published unless all 7 verification controls pass and unresolved conflicts are absent.",
   "candidates": [
     {
@@ -140,6 +140,40 @@
         "Newcastle United official"
       ],
       "checkedAt": "2026-09-08"
+    },
+    {
+      "name": "Kennet Eichhorn",
+      "country": "Germany",
+      "club": "Bayer 04 Leverkusen",
+      "reason": "Niet gepubliceerd: onvoldoende onafhankelijke bronnen om alle vereiste 7 controles volledig en zonder tegenstrijdigheid te bevestigen in deze run.",
+      "failedControl": "7-voudige verificatie",
+      "supportingSources": [
+        "Bayer 04 Leverkusen official profile"
+      ],
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "name": "Finn Inglethorpe",
+      "country": "England",
+      "club": "Liverpool FC",
+      "reason": "Niet gepubliceerd: officiële bron bevestigt profiel en jeugdstatistieken, maar de volledige 7-check set met onafhankelijke bronnen is niet compleet bevestigd in deze run.",
+      "failedControl": "7-voudige verificatie",
+      "supportingSources": [
+        "Liverpool FC official profile",
+        "Liverpool FC official news"
+      ],
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "name": "Reigan Heskey",
+      "country": "Germany",
+      "club": "1. FC Köln",
+      "reason": "Niet gepubliceerd: speler is te zichtbaar/te gevestigd voor de minder-bekende TalentScout-filter en de 7-check publicatiedrempel is niet volledig gehaald.",
+      "failedControl": "Lesser-known filter + 7-voudige verificatie",
+      "supportingSources": [
+        "1. FC Köln official announcement"
+      ],
+      "checkedAt": "2026-09-09"
     }
   ]
 }

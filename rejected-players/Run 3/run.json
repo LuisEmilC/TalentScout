@@ -1,0 +1,10 @@
+{
+  "runNumber": 3,
+  "sourceReport": "talent-finder-runs/2026-09-09-live-recovery-1409.json",
+  "runStartedAt": "2026-09-09T12:09:57Z",
+  "runCompletedAt": "2026-09-09T12:12:30Z",
+  "status": "completed",
+  "approvedPlayers": 0,
+  "rejectedPlayers": 3,
+  "technicalWriteFailureIsRejection": false
+}
