@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: '0 10 * * *'
   workflow_dispatch:
+  push:
+    paths:
+      - 'talent-finder-runner.py'
+      - '.github/workflows/talent-finder-runner.yml'
 
 permissions:
   contents: write
