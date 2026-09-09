@@ -1,0 +1,92 @@
+{
+  "runId": "2026-09-09-long-run-1431",
+  "startedAt": "2026-09-09T14:31:09+02:00",
+  "completedAt": "2026-09-09T14:34:00+02:00",
+  "runType": "long_continuous",
+  "verificationPolicy": {
+    "checksRequired": 7,
+    "approvalRule": "5-of-7 majority",
+    "coreContradictionBlocks": true,
+    "technicalWriteFailureIsNotRejection": true
+  },
+  "screenedCount": 7,
+  "approvedCount": 0,
+  "rejectedCount": 7,
+  "databaseWrite": {
+    "attempted": true,
+    "approvedPlayersWritten": 0,
+    "rejectedPlayersWritten": 7,
+    "existingPlayersPreserved": true,
+    "verification": "run-report written; downstream GitHub Actions sync pending"
+  },
+  "candidates": [
+    {
+      "name": "Reigan Heskey",
+      "country": "Germany",
+      "club": "1. FC Köln",
+      "decision": "rejected",
+      "reason": "Too established/visible for lesser-known filter; official club profile confirms high-profile academy and senior pathway.",
+      "checks": {"passed": 6, "failed": 1, "coreContradiction": false},
+      "sources": ["https://fc.de/en/news/all-news/reigan-heskey-joins-fc"]
+    },
+    {
+      "name": "Joe Upton",
+      "country": "England",
+      "club": "Liverpool FC Academy",
+      "decision": "rejected",
+      "reason": "Insufficient independent sources for a publishable 5-of-7 approval; official profile confirms identity, age and club but not the full required data set.",
+      "checks": {"passed": 4, "failed": 3, "coreContradiction": false},
+      "sources": ["https://www.liverpoolfc.com/team/academy/player/joe-upton"]
+    },
+    {
+      "name": "Mahdi Nicoll-Jazuli",
+      "country": "England",
+      "club": "Chelsea FC Academy",
+      "decision": "rejected",
+      "reason": "Too established/visible for lesser-known filter; official club academy profile documents UEFA Youth League and Premier League 2 exposure.",
+      "checks": {"passed": 6, "failed": 1, "coreContradiction": false},
+      "sources": ["https://www.chelseafc.com/en/news/article/introducing-our-academy-scholars-for-the-2026-27-season"]
+    },
+    {
+      "name": "Andrew Pennie",
+      "country": "England",
+      "club": "Chelsea FC Academy",
+      "decision": "rejected",
+      "reason": "Too established/visible for lesser-known filter; official profile confirms Under-21 and EFL Trophy appearances.",
+      "checks": {"passed": 6, "failed": 1, "coreContradiction": false},
+      "sources": ["https://www.chelseafc.com/en/news/article/introducing-our-academy-scholars-for-the-2026-27-season"]
+    },
+    {
+      "name": "Gabriel Sambou",
+      "country": "England",
+      "club": "Chelsea FC Academy",
+      "decision": "rejected",
+      "reason": "Insufficient independent current-statistics sources for publishable approval; official profile confirms academy status but not all required competition/stat fields.",
+      "checks": {"passed": 4, "failed": 3, "coreContradiction": false},
+      "sources": ["https://www.chelseafc.com/en/news/article/introducing-our-academy-scholars-for-the-2026-27-season"]
+    },
+    {
+      "name": "Diego Reyes",
+      "country": "Brazil",
+      "club": "Flamengo U20",
+      "decision": "rejected",
+      "reason": "Official source confirms loan and age, but the current competition/statistics package is incomplete for 5-of-7 publication.",
+      "checks": {"passed": 4, "failed": 3, "coreContradiction": false},
+      "sources": ["https://www.flamengo.com.br/en/noticias/futebol-de-base/flamengo-acerta-emprestimo-do-mexicano-diego-reyes"]
+    },
+    {
+      "name": "Alfred Gøthler",
+      "country": "Spain",
+      "club": "CD Leganés",
+      "decision": "rejected",
+      "reason": "Current-country eligibility is unresolved because the official profile states he remained at HB Køge until the end of 2025/26 before joining Leganés; core current-club timeline must be revalidated.",
+      "checks": {"passed": 3, "failed": 4, "coreContradiction": true},
+      "sources": ["https://www.cdleganes.com/the-young-dane-alfred-gthler-an-investment-in-the-future"]
+    }
+  ],
+  "notes": [
+    "No new player was added to verified-players.json in this run.",
+    "All existing verified players must remain preserved.",
+    "The long-run instruction remains active for the next execution cycle; this report records the current completed batch only."
+  ]
+}
