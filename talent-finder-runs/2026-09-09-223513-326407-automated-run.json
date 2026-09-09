@@ -1,0 +1,62 @@
+{
+  "runStartedAt": "2026-09-09T20:34:52.382897+00:00",
+  "runCompletedAt": "2026-09-09T20:35:13.326407+00:00",
+  "status": "completed",
+  "runType": "automated real public-source scouting run",
+  "countriesScouted": [
+    "Fiji",
+    "Papua New Guinea",
+    "Samoa",
+    "Tonga"
+  ],
+  "scope": "Young lesser-known players currently attached to clubs in the selected countries, not selected by nationality.",
+  "verificationPolicy": "Minimum 7 explicit controls; minimum 2 independent public sources; essential published information is name, age, nationality, position, club and playing country; unresolved contradictions block publication.",
+  "candidatesScreened": 3,
+  "approvedPlayers": [],
+  "rejectedPlayers": [
+    {
+      "id": "candidate:Q138301994",
+      "name": "Aliana Vakaloloma",
+      "country": "Fiji",
+      "club": "Fiji women's national under-20 football team",
+      "reason": "TypeError: expected string or bytes-like object, got 'dict'",
+      "failedControls": [
+        "runner_error"
+      ],
+      "checksPerformed": 1,
+      "checksPassed": 0,
+      "supportingSources": []
+    },
+    {
+      "id": "candidate:Q111363926",
+      "name": "Nabil Begg",
+      "country": "Fiji",
+      "club": "Fiji men's national football team",
+      "reason": "TypeError: expected string or bytes-like object, got 'dict'",
+      "failedControls": [
+        "runner_error"
+      ],
+      "checksPerformed": 1,
+      "checksPassed": 0,
+      "supportingSources": []
+    },
+    {
+      "id": "candidate:Q135213279",
+      "name": "Philip Fatialofa",
+      "country": "Samoa",
+      "club": "Samoa national under-20 association football team",
+      "reason": "TypeError: expected string or bytes-like object, got 'dict'",
+      "failedControls": [
+        "runner_error"
+      ],
+      "checksPerformed": 1,
+      "checksPassed": 0,
+      "supportingSources": []
+    }
+  ],
+  "existingPlayersPreserved": true,
+  "unexpectedDeletions": false,
+  "jsonValid": true,
+  "writeVerification": "sync-after-talent-finder-run workflow",
+  "runnerErrors": []
+}
