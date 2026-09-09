@@ -1,0 +1,10 @@
+{
+  "runNumber": 4,
+  "sourceReport": "talent-finder-runs/2026-09-09-230453-702306-automated-run.json",
+  "runStartedAt": "2026-09-09T21:03:42.180506+00:00",
+  "runCompletedAt": "2026-09-09T21:04:53.702306+00:00",
+  "status": "completed",
+  "approvedPlayers": 0,
+  "rejectedPlayers": 1,
+  "technicalWriteFailureIsRejection": false
+}
