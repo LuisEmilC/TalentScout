@@ -1,0 +1,49 @@
+{
+  "runStartedAt": "2026-09-09T20:47:23.565899+00:00",
+  "runCompletedAt": "2026-09-09T20:48:03.271440+00:00",
+  "status": "completed",
+  "runType": "automated real public-source scouting run",
+  "regionOrder": [
+    "Europe",
+    "Asia",
+    "North America",
+    "South America",
+    "Africa",
+    "Oceania"
+  ],
+  "countriesScouted": [
+    "Fiji",
+    "Papua New Guinea",
+    "Samoa",
+    "Tonga"
+  ],
+  "scope": "Young lesser-known players currently attached to clubs in the selected countries, not selected by nationality.",
+  "verificationPolicy": "Exactly 7 main controls. 5/7, 6/7 or 7/7 may pass; 4/7 or lower is rejected. Evidence subchecks do not create extra main controls. Minimum 2 independent public sources. Hard contradictions block publication. Technical errors are stored in runnerErrors and are never converted into player rejections.",
+  "candidatesScreened": 2,
+  "approvedPlayers": [],
+  "rejectedPlayers": [],
+  "runnerErrors": [
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q111363926",
+      "name": "Nabil Begg",
+      "club": "Fiji men's national football team",
+      "country": "Fiji",
+      "errorType": "HTTPError",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "stage": "candidate_verification",
+      "candidateId": "Q135213279",
+      "name": "Philip Fatialofa",
+      "club": "Samoa national under-23 association football team",
+      "country": "Samoa",
+      "errorType": "HTTPError",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "existingPlayersPreserved": true,
+  "unexpectedDeletions": false,
+  "jsonValid": true,
+  "writeVerification": "workflow_run sync-after-talent-finder-run"
+}
