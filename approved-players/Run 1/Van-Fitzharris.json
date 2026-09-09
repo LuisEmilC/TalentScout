@@ -1,0 +1,12 @@
+{
+  "name": "Van Fitzharris",
+  "country": "New Zealand",
+  "club": "Auckland FC",
+  "age": 18,
+  "position": "Aanvallende middenvelder",
+  "verification": {
+    "status": "verified",
+    "checksPassed": 7,
+    "note": "7/7 passed; no unresolved conflict"
+  }
+}
