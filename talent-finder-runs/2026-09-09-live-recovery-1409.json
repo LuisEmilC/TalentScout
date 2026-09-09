@@ -1,0 +1,47 @@
+{
+  "status": "completed",
+  "runStartedAt": "2026-09-09T12:09:57Z",
+  "runCompletedAt": "2026-09-09T12:12:30Z",
+  "regionsScanned": ["Europe", "Asia", "North America", "South America", "Africa", "Oceania"],
+  "screenedCount": 3,
+  "approvedPlayers": [],
+  "rejectedPlayers": [
+    {
+      "name": "Kennet Eichhorn",
+      "country": "Germany",
+      "club": "Bayer 04 Leverkusen",
+      "reason": "Niet gepubliceerd: onvoldoende onafhankelijke bronnen om alle vereiste 7 controles volledig en zonder tegenstrijdigheid te bevestigen in deze run.",
+      "failedControl": "7-voudige verificatie",
+      "supportingSources": ["Bayer 04 Leverkusen official profile"]
+    },
+    {
+      "name": "Finn Inglethorpe",
+      "country": "England",
+      "club": "Liverpool FC",
+      "reason": "Niet gepubliceerd: officiële bron bevestigt profiel en jeugdstatistieken, maar de volledige 7-check set met onafhankelijke bronnen is niet compleet bevestigd in deze run.",
+      "failedControl": "7-voudige verificatie",
+      "supportingSources": ["Liverpool FC official profile", "Liverpool FC official news"]
+    },
+    {
+      "name": "Reigan Heskey",
+      "country": "Germany",
+      "club": "1. FC Köln",
+      "reason": "Niet gepubliceerd: speler is te zichtbaar/te gevestigd voor de minder-bekende TalentScout-filter en de 7-check publicatiedrempel is niet volledig gehaald.",
+      "failedControl": "Lesser-known filter + 7-voudige verificatie",
+      "supportingSources": ["1. FC Köln official announcement"]
+    }
+  ],
+  "verificationPolicy": {
+    "minimumChecksPerApprovedPlayer": 7,
+    "officialSourcesFirst": true,
+    "publishOnUnresolvedContradiction": false,
+    "technicalWriteFailureIsPlayerRejection": false
+  },
+  "technicalErrors": [],
+  "databaseWrite": {
+    "attempted": true,
+    "approvedDatabaseChanges": 0,
+    "existingPlayersPreserved": true,
+    "reportWrittenToGitHub": true
+  }
+}
