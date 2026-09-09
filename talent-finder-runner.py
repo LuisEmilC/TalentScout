@@ -6,7 +6,7 @@ from zoneinfo import ZoneInfo
 
 ROOT=Path(__file__).resolve().parent; RUNS=ROOT/'talent-finder-runs'; RUNS.mkdir(parents=True,exist_ok=True)
 COUNTRIES=['Belgium','Netherlands','France','Germany','Spain','Portugal','Italy','England','Turkey','Japan','South Korea','India','Saudi Arabia','Australia','New Zealand','Argentina','Brazil','Chile','Colombia','Ecuador','South Africa','Nigeria','Ghana','Morocco','Egypt','Mexico','Canada','United States','Costa Rica','Uruguay','Paraguay','Peru','Bolivia','Venezuela','Switzerland','Austria','Denmark','Sweden','Norway','Poland','Czechia','Croatia','Serbia','Greece','Romania','Ukraine','Georgia','Israel','Qatar','United Arab Emirates','Thailand','Indonesia','Malaysia','Vietnam','China','Iran','Iraq','Uzbekistan','Kazakhstan','Cameroon','Senegal','Ivory Coast','Algeria','Tunisia','Kenya','Tanzania','Zambia','Zimbabwe','Fiji','Papua New Guinea','Samoa','Tonga']
-UA='TalentScout-Talent-Finder/7.3 (https://github.com/LuisEmilC/TalentScout; public scouting project)'
+UA='TalentScout-Talent-Finder/7.4 (https://github.com/LuisEmilC/TalentScout; public scouting project)'
 SPARQL='https://query.wikidata.org/sparql?format=json&query='
 SPARQL_POST='https://query.wikidata.org/sparql'
 WD='https://www.wikidata.org/w/api.php?action=wbgetentities&ids={}&format=json&props=claims|labels'
@@ -60,9 +60,7 @@ def age(value,today):
     y,mo,d=map(int,m.groups()); return today.year-y-((today.month,today.day)<(mo,d))
 
 def entity_label(qid):
-    try:
-        d=get(WD.format(qid),20).get('entities',{}).get(qid,{})
-        return d.get('labels',{}).get('en',{}).get('value')
+    try:return get(WD.format(qid),20).get('entities',{}).get(qid,{}).get('labels',{}).get('en',{}).get('value')
     except Exception:return None
 
 def discover(countries,limit=8):
@@ -100,37 +98,32 @@ def tm(name,club):
     except Exception:return False
 
 def verify(c,now):
-    checks=[]; sources={'Wikidata'}; reasons=[]; evidence={}
+    checks=[]; sources={'Wikidata'}; reasons=[]; technical=[]
     try:
         ent=get(WD.format(c['qid']),20).get('entities',{}).get(c['qid'],{}); cl=ent.get('claims',{})
         label=ent.get('labels',{}).get('en',{}).get('value','').strip(); a=age(next(iter(vals(cl,'P569')),None),now.date()); current=qids(cl,'P54')
         nat_ids=qids(cl,'P27'); pos_ids=qids(cl,'P413')
         nationality=entity_label(nat_ids[0]) if nat_ids else None; position=entity_label(pos_ids[0]) if pos_ids else None
-        checks.append(('1_identity',label.lower()==c['name'].strip().lower()))
-        checks.append(('2_age_13_23',a is not None and 13<=a<=23))
-        checks.append(('3_current_club_wikidata',c['clubQid'] in current))
-        checks.append(('4_club_and_country',bool(c['club'] and c['country'])))
+        checks += [('1_identity',label.lower()==c['name'].strip().lower()),('2_age_13_23',a is not None and 13<=a<=23),('3_current_club_wikidata',c['clubQid'] in current),('4_club_and_country',bool(c['club'] and c['country']))]
         sofa_ok=False; team=None; sofa_nat=None; sofa_pos=None
         try:
             p=sofa(c['name'])
             if p:
-                sofa_ok=True; team=(p.get('team') or {}).get('name'); sofa_nat=((p.get('country') or {}).get('name')); sofa_pos=p.get('position'); sources.add('Sofascore')
-        except Exception as e:evidence['SofascoreError']=f'{type(e).__name__}: {e}'
+                sofa_ok=True; team=(p.get('team') or {}).get('name'); sofa_nat=(p.get('country') or {}).get('name'); sofa_pos=p.get('position'); sources.add('Sofascore')
+        except Exception as e: technical.append({'source':'Sofascore','errorType':type(e).__name__,'error':str(e)})
         tm_ok=False
         try:
             tm_ok=tm(c['name'],c['club'])
             if tm_ok:sources.add('Transfermarkt')
-        except Exception as e:evidence['TransfermarktError']=f'{type(e).__name__}: {e}'
-        checks.append(('5_independent_player_profile',sofa_ok or tm_ok))
-        independent_club=(bool(team and team.strip().lower()==c['club'].strip().lower()) if sofa_ok else tm_ok)
-        checks.append(('6_current_club_independent',independent_club))
-        checks.append(('7_essential_profile_fields_available',bool(c['name'] and a is not None and (sofa_nat or nationality) and (sofa_pos or position) and c['club'] and c['country'])))
+        except Exception as e: technical.append({'source':'Transfermarkt','errorType':type(e).__name__,'error':str(e)})
+        checks += [('5_independent_player_profile',sofa_ok or tm_ok),('6_current_club_independent',(bool(team and team.strip().lower()==c['club'].strip().lower()) if sofa_ok else tm_ok)),('7_essential_profile_fields_available',bool(c['name'] and a is not None and (sofa_nat or nationality) and (sofa_pos or position) and c['club'] and c['country']))]
         passed=sum(ok for _,ok in checks); hard_conflict=bool(sofa_ok and team and team.strip().lower()!=c['club'].strip().lower())
         if hard_conflict: reasons.append('harde clubtegenstrijdigheid')
         if not checks[0][1]: reasons.append('identiteit niet bevestigd')
         if passed<5: reasons.append('minder dan 5 van 7 hoofdcontroles')
         if len(sources)<2: reasons.append('minder dan 2 onafhankelijke bronnen')
-        player={'id':f'official:wikidata:{c["qid"]}','name':c['name'],'age':a,'club':team or c['club'],'position':sofa_pos or position,'nationality':sofa_nat or nationality,'country':c['country'],'sources':sorted(sources),'verification':{'status':'verified','checkedAt':now.isoformat(),'checksPassed':[n for n,ok in checks if ok],'checkCount':passed,'mainControlCount':7,'controls':{n:ok for n,ok in checks},'hardConflict':hard_conflict,'additionalEvidence':evidence}}
+        if technical and (not sofa_ok and not tm_ok): return None,checks,[],{'candidateId':c['qid'],'name':c['name'],'club':c['club'],'country':c['country'],'errorType':'SourceTechnicalError','error':'; '.join(f"{x['source']}: {x['error']}" for x in technical),'checks':{n:ok for n,ok in checks}}
+        player={'id':f'official:wikidata:{c["qid"]}','name':c['name'],'age':a,'club':team or c['club'],'position':sofa_pos or position,'nationality':sofa_nat or nationality,'country':c['country'],'sources':sorted(sources),'verification':{'status':'verified','checkedAt':now.isoformat(),'checksPassed':[n for n,ok in checks if ok],'checkCount':passed,'mainControlCount':7,'controls':{n:ok for n,ok in checks},'hardConflict':hard_conflict,'additionalEvidence':{'sourceErrors':technical}}}
         return player,checks,reasons,None
     except Exception as e:
         return None,[],[],{'candidateId':c.get('qid'),'name':c.get('name'),'club':c.get('club'),'country':c.get('country'),'errorType':type(e).__name__,'error':str(e)}
