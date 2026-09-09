@@ -75,12 +75,12 @@ def verify(c,now):
         if p:sources.append('Sofascore')
         c5=bool(p); checks.append(('independent_player_profile',c5))
         team=(p or {}).get('team',{}).get('name'); c6=bool(team and team.strip().lower()==c['club'].strip().lower()); checks.append(('current_club_independent',c6))
-        # We never invent statistics. Search results without verified current stats remain rejected.
-        stats=bool(p and all(k in p for k in ('position','country'))); c7=stats; checks.append(('profile_fields_available',c7))
-        player={'id':f'official:wikidata:{c["qid"]}','name':c['name'],'age':a,'club':team or c['club'],'position':p.get('position') if p else None,'nationality':(p.get('country') or {}).get('name') if p else None,'goals':None,'assists':None,'appearances':None,'minutes':None,'sources':sorted(set(sources)),'verification':{'status':'verified','checkedAt':now.date().isoformat(),'checksPassed':[n for n,ok in checks if ok]},'country':c['country']}
+        # Only the essential player information is mandatory. Extra reliable fields may be added later.
+        position=(p or {}).get('position'); nationality=((p or {}).get('country') or {}).get('name') if p else None
+        c7=bool(position and nationality); checks.append(('essential_profile_fields_available',c7))
+        player={'id':f'official:wikidata:{c["qid"]}','name':c['name'],'age':a,'club':team or c['club'],'position':position,'nationality':nationality,'country':c['country'],'sources':sorted(set(sources)),'verification':{'status':'verified','checkedAt':now.date().isoformat(),'checksPassed':[n for n,ok in checks if ok]},'optionalInfo':{}}
         if len(sources)<2: reasons.append('fewer than 2 independent public sources')
         if not all(ok for _,ok in checks): reasons.append('not all 7 controls passed')
-        if any(player.get(k) is None for k in ('position','nationality','goals','assists','appearances','minutes')): reasons.append('complete current statistics are not publicly verified')
         return player,checks,reasons
     except Exception as e:
         return None,[('runner_error',False)],[str(e)]
@@ -94,9 +94,9 @@ def main():
             if c['qid'] in seen:continue
             seen.add(c['qid']); screened+=1
             p,checks,reasons=verify(c,now); passed=sum(1 for _,ok in checks if ok)
-            if p and passed>=7 and len(p['sources'])>=2 and not any(p.get(k) is None for k in ('position','nationality','goals','assists','appearances','minutes')): approved.append(p)
+            if p and passed>=7 and len(p['sources'])>=2: approved.append(p)
             else: rejected.append({'name':c['name'],'country':country,'club':c.get('club'),'reason':' / '.join(reasons) or 'verification failed','failedControl':', '.join(n for n,ok in checks if not ok),'supportingSources':sorted(set((p or {}).get('sources',[])))})
     local=now.astimezone(ZoneInfo('Europe/Brussels')); stamp=local.strftime('%Y-%m-%d-%H%M%S')
-    report={'runStartedAt':now.isoformat(),'runCompletedAt':datetime.now(timezone.utc).isoformat(),'runType':'automated real public-source scouting run','countriesScouted':[x[1] for x in ts],'regionOrder':[x[0] for x in ts],'scope':'Young players currently attached to clubs in the selected countries.','verificationPolicy':'Minimum 7 separate controls, minimum 2 independent public sources, no guessed fields, unresolved contradictions block publication.','candidatesScreened':screened,'approvedPlayers':approved,'rejectedPlayers':rejected,'existingPlayersPreserved':True,'unexpectedDeletions':False,'jsonValid':True,'writeVerification':'pending GitHub Actions sync','runnerErrors':errors}
+    report={'runStartedAt':now.isoformat(),'runCompletedAt':datetime.now(timezone.utc).isoformat(),'runType':'automated real public-source scouting run','countriesScouted':[x[1] for x in ts],'regionOrder':[x[0] for x in ts],'scope':'Young players currently attached to clubs in the selected countries.','verificationPolicy':'Minimum 7 separate controls, minimum 2 independent public sources, no guessed essential fields, unresolved contradictions block publication. Essential published information: name, age, nationality, position, club, and country where the player plays. Additional reliable information may be included when available; it is never required for approval.','candidatesScreened':screened,'approvedPlayers':approved,'rejectedPlayers':rejected,'existingPlayersPreserved':True,'unexpectedDeletions':False,'jsonValid':True,'writeVerification':'pending GitHub Actions sync','runnerErrors':errors}
     out=RUNS/f'{stamp}-automated-run.json'; out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8'); print(out)
 if __name__=='__main__': main()
