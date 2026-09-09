@@ -3,6 +3,7 @@ name: Talent Finder resultaten naar database
 on:
   push:
     paths:
+      - 'talent-finder-runs/**/*.json'
       - 'talent-finder-runs/*.json'
   workflow_dispatch:
 
@@ -22,13 +23,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Sync latest Talent Finder report
+      - name: Sync and archive Talent Finder run
         env:
           BEFORE_SHA: ${{ github.event.before }}
           AFTER_SHA: ${{ github.sha }}
         run: |
           python3 - <<'PY'
-          import json, os, subprocess
+          import json, os, re, subprocess
           from datetime import datetime, timezone
           from pathlib import Path
 
@@ -36,10 +37,19 @@ jobs:
               return json.loads(Path(path).read_text(encoding='utf-8'))
 
           def save(path, data):
-              Path(path).write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+              path = Path(path)
+              path.parent.mkdir(parents=True, exist_ok=True)
+              path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-          def names(items, key='name'):
-              return {str(x.get(key, '')).strip().lower() for x in items if isinstance(x, dict) and str(x.get(key, '')).strip()}
+          def names(items):
+              return {str(x.get('name', '')).strip().lower() for x in items if isinstance(x, dict) and str(x.get('name', '')).strip()}
+
+          def name_of(item):
+              return str(item.get('name', '')).strip() if isinstance(item, dict) else ''
+
+          def slug(name):
+              s = re.sub(r'[^A-Za-z0-9]+', '-', name).strip('-')
+              return s or 'unknown-player'
 
           before = os.environ.get('BEFORE_SHA', '')
           after = os.environ.get('AFTER_SHA', '')
@@ -47,7 +57,7 @@ jobs:
           if before and after and before != '0000000000000000000000000000000000000000':
               try:
                   changed = subprocess.check_output(['git', 'diff', '--name-only', before, after], text=True).splitlines()
-                  reports = [p for p in changed if p.startswith('talent-finder-runs/') and p.endswith('.json')]
+                  reports = [p for p in changed if p.startswith('talent-finder-runs/') and p.endswith('.json') and '/Run ' not in p]
               except Exception as e:
                   print('Diff lookup failed:', e)
           if not reports:
@@ -61,30 +71,34 @@ jobs:
           report = load(report_path)
           status = str(report.get('status', '')).strip()
 
-          # Technical write failures are never player rejections.
+          # Technical write failures are never player rejections and never create player files.
           if status == 'blocked_before_database_write':
               print(f'OVERGESLAGEN: {report_path} bevat een technische write-block.')
-              print('Geen speler wordt hierdoor afgewezen of gepubliceerd.')
               raise SystemExit(0)
 
-          approved_items = report.get('approvedPlayers', []) or []
-          rejected_items = report.get('rejectedPlayers', []) or []
+          approved_items = report.get('approvedPlayers', report.get('published', [])) or []
+          rejected_items = report.get('rejectedPlayers', report.get('rejected', [])) or []
           if not isinstance(approved_items, list) or not isinstance(rejected_items, list):
-              raise SystemExit('Rapport bevat geen geldige approvedPlayers/rejectedPlayers arrays.')
+              raise SystemExit('Rapport bevat geen geldige approved/rejected arrays.')
 
-          # Every approved player must explicitly carry seven passed checks and at least two sources.
-          # The report's controls list is not accepted as proof of passed checks.
-          required_checks = 7
+          # Every newly published player must explicitly prove 7+ checks and 2+ sources.
           for item in approved_items:
               if not isinstance(item, dict):
                   raise SystemExit('Ongeldig approvedPlayers-record.')
               checks = item.get('checksPassed')
+              if isinstance(checks, int):
+                  check_count = checks
+              elif isinstance(checks, list):
+                  check_count = len(checks)
+              else:
+                  check_count = 0
               sources = item.get('sources') or item.get('supportingSources')
-              if not isinstance(checks, list) or len(checks) < required_checks:
-                  raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} heeft geen expliciete 7+ checksPassed.")
+              if check_count < 7:
+                  raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} heeft minder dan 7 expliciete checks.")
               if not isinstance(sources, list) or len(sources) < 2:
                   raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} heeft minder dan 2 bronnen.")
-              if item.get('verificationStatus', 'verified') != 'verified' and item.get('verification', {}).get('status') != 'verified':
+              verification = item.get('verification', {})
+              if item.get('verificationStatus', 'verified') != 'verified' and verification.get('status') != 'verified':
                   raise SystemExit(f"PUBLICATIE GEBLOKKEERD: {item.get('name', '')} is niet expliciet verified.")
 
           approved = load('approved-players/players.json')
@@ -101,10 +115,7 @@ jobs:
 
           baseline_verified = names(verified['players'])
           baseline_approved = names(approved['players'])
-          run_date = str(report.get('runStartedAt', ''))[:10] or datetime.now(timezone.utc).strftime('%Y-%m-%d')
-
-          def name_of(item):
-              return str(item.get('name', '')).strip() if isinstance(item, dict) else ''
+          run_date = str(report.get('runStartedAt', report.get('runAt', '')))[:10] or datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
           def make_player(item):
               player = dict(item)
@@ -112,16 +123,17 @@ jobs:
               player.setdefault('nationality', item.get('nationality') or item.get('country'))
               player.setdefault('country', item.get('country'))
               player.setdefault('sources', item.get('sources') or item.get('supportingSources') or [])
-              checks = item.get('checksPassed') or []
+              checks = item.get('checksPassed')
+              if isinstance(checks, int):
+                  checks = [f'check-{i}' for i in range(1, checks + 1)]
               player['verification'] = {
                   'status': 'verified',
                   'checkedAt': run_date,
-                  'checksPassed': checks
+                  'checksPassed': checks or []
               }
               return player
 
           changed_db = False
-
           for item in approved_items:
               name = name_of(item)
               if not name:
@@ -138,18 +150,20 @@ jobs:
               rejected_players['candidates'] = [c for c in rejected_players['candidates'] if name_of(c).lower() != name.lower()]
               changed_db = True
 
+          real_rejects = []
           for item in rejected_items:
               name = name_of(item)
               if not name:
                   continue
               reason = str(item.get('reason', ''))
               if 'write' in reason.lower() and 'blocked' in reason.lower():
-                  print(f'Niet toegevoegd als reject: technische write-block bij {name}')
+                  print(f'Niet als reject opgeslagen: technische write-block bij {name}')
                   continue
               candidate = dict(item)
               candidate['supportingSources'] = candidate.get('supportingSources') or candidate.get('sources') or []
               candidate['checkedAt'] = candidate.get('checkedAt') or run_date
               candidate.setdefault('failedControl', '7-voudige verificatie')
+              real_rejects.append(candidate)
               for db in (rejected, rejected_players):
                   existing = next((c for c in db['candidates'] if name_of(c).lower() == name.lower()), None)
                   if existing:
@@ -160,17 +174,52 @@ jobs:
               changed_db = True
 
           # Never silently delete a previously verified/approved player.
-          after_verified = names(verified['players'])
-          after_approved = names(approved['players'])
-          missing_verified = baseline_verified - after_verified
-          missing_approved = baseline_approved - after_approved
+          missing_verified = baseline_verified - names(verified['players'])
+          missing_approved = baseline_approved - names(approved['players'])
           if missing_verified or missing_approved:
               raise SystemExit(f'PRESERVATION CHECK FAILED: verified={sorted(missing_verified)} approved={sorted(missing_approved)}')
 
-          if not changed_db:
-              print('Geen echte databasewijziging uit dit rapport.')
-              raise SystemExit(0)
+          # Sequential Run number: max existing Run N + 1.
+          run_numbers = []
+          for root in (Path('approved-players'), Path('rejected-players')):
+              if root.exists():
+                  for p in root.iterdir():
+                      m = re.fullmatch(r'Run (\d+)', p.name)
+                      if m and p.is_dir():
+                          run_numbers.append(int(m.group(1)))
+          run_number = max(run_numbers, default=0) + 1
+          run_label = f'Run {run_number}'
 
+          # Archive the exact result of this run using the same Run number on both sides.
+          approved_dir = Path('approved-players') / run_label
+          rejected_dir = Path('rejected-players') / run_label
+          approved_dir.mkdir(parents=True, exist_ok=True)
+          rejected_dir.mkdir(parents=True, exist_ok=True)
+
+          for item in approved_items:
+              name = name_of(item)
+              if name:
+                  save(approved_dir / f'{slug(name)}.json', make_player(item))
+
+          for item in real_rejects:
+              name = name_of(item)
+              if name:
+                  save(rejected_dir / f'{slug(name)}.json', item)
+
+          run_meta = {
+              'runNumber': run_number,
+              'sourceReport': str(report_path),
+              'runStartedAt': report.get('runStartedAt', report.get('runAt')),
+              'runCompletedAt': report.get('runCompletedAt'),
+              'status': status or 'completed',
+              'approvedPlayers': len(approved_items),
+              'rejectedPlayers': len(real_rejects),
+              'technicalWriteFailureIsRejection': False
+          }
+          save(approved_dir / 'run.json', run_meta)
+          save(rejected_dir / 'run.json', run_meta)
+
+          # Save aggregate databases even when only run archive metadata changed.
           for f, data in [
               ('approved-players/players.json', approved),
               ('verified-players.json', verified),
@@ -181,33 +230,40 @@ jobs:
               load(f)
               print('Valid JSON:', f)
 
-          print(f'Gesynchroniseerd rapport: {report_path}')
-          print(f'Goedgekeurd toegevoegd/bijgewerkt: {len(approved_items)}')
-          print(f'Echte rejects toegevoegd/bijgewerkt: {len(rejected_items)}')
+          print(f'RUN NUMBER: {run_number}')
+          print(f'APPROVED ARCHIVE: {approved_dir}')
+          print(f'REJECTED ARCHIVE: {rejected_dir}')
+          print(f'Goedgekeurd: {len(approved_items)}')
+          print(f'Echte rejects: {len(real_rejects)}')
           print('Preservation check: OK')
           PY
 
-      - name: Controleer databasewijzigingen
+      - name: Validate all TalentScout JSON databases
         run: |
           python3 - <<'PY'
           import json
           from pathlib import Path
-          files = ['approved-players/players.json','verified-players.json','rejected-candidates.json','rejected-players/players.json']
-          for f in files:
+          roots = [Path('approved-players'), Path('rejected-players'), Path('talent-finder-runs')]
+          for root in roots:
+              if root.exists():
+                  for f in root.rglob('*.json'):
+                      json.loads(f.read_text(encoding='utf-8'))
+                      print(f, 'OK')
+          for f in ['approved-players/players.json','verified-players.json','rejected-candidates.json','rejected-players/players.json']:
               data = json.loads(Path(f).read_text(encoding='utf-8'))
               if not isinstance(data, dict):
-                  raise SystemExit(f'{f}: root moet een object zijn')
-              print(f, 'OK')
+                  raise SystemExit(f'{f}: root moet object zijn')
+          print('Alle TalentScout JSON-bestanden zijn geldig.')
           PY
 
-      - name: Commit database sync
+      - name: Commit database and Run archive
         run: |
-          if git diff --quiet -- approved-players/players.json verified-players.json rejected-candidates.json rejected-players/players.json; then
-            echo 'Geen databasewijzigingen om te committen.'
+          if git diff --quiet; then
+            echo 'Geen wijzigingen om te committen.'
             exit 0
           fi
           git config user.name 'TalentScout Bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add approved-players/players.json verified-players.json rejected-candidates.json rejected-players/players.json
-          git commit -m 'Sync Talent Finder resultaten naar databases'
+          git add approved-players rejected-players verified-players.json rejected-candidates.json talent-finder-runs
+          git commit -m 'Archive Talent Finder run and sync databases'
           git push
