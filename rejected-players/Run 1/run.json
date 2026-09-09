@@ -1,7 +1,9 @@
 {
   "runNumber": 1,
-  "sourceReport": "talent-finder-runs/2026-09-07-large-run.json",
-  "approvedPlayers": 1,
-  "rejectedPlayers": 9,
-  "status": "completed"
+  "sourceReport": "talent-finder-runs/2026-09-09-222728-038063-automated-run.json",
+  "runStartedAt": "2026-09-09T20:27:26.920628+00:00",
+  "runCompletedAt": "2026-09-09T20:27:28.038063+00:00",
+  "status": "completed",
+  "approvedPlayers": 0,
+  "rejectedPlayers": 0
 }
