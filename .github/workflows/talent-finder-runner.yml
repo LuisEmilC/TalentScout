@@ -19,7 +19,7 @@ concurrency:
 jobs:
   scout:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -39,18 +39,39 @@ jobs:
           data=json.loads(reports[-1].read_text(encoding='utf-8'))
           if not data.get('runStartedAt') or not data.get('runCompletedAt'): raise SystemExit('FOUT: timestamps ontbreken.')
           if not isinstance(data.get('approvedPlayers'),list) or not isinstance(data.get('rejectedPlayers'),list): raise SystemExit('FOUT: approved/rejected arrays ontbreken.')
+          if not isinstance(data.get('runnerErrors'),list): raise SystemExit('FOUT: runnerErrors ontbreekt of is geen lijst.')
           if data.get('jsonValid') is not True: raise SystemExit('FOUT: report is niet geldig verklaard.')
+          for item in data.get('approvedPlayers',[]):
+              v=item.get('verification') or {}
+              if v.get('mainControlCount') != 7 or not isinstance(v.get('controls'),dict) or len(v.get('controls')) != 7:
+                  raise SystemExit(f"FOUT: {item.get('name','')} heeft geen exact 7 hoofdcontroles.")
+              passed=v.get('checksPassed',[])
+              n=passed if isinstance(passed,int) else len(passed) if isinstance(passed,list) else 0
+              if n < 5 or n > 7: raise SystemExit(f"FOUT: {item.get('name','')} heeft ongeldige score {n}/7.")
+              if len(item.get('sources') or []) < 2: raise SystemExit(f"FOUT: {item.get('name','')} heeft minder dan 2 bronnen.")
           print('Geldig nieuw report:',reports[-1])
           PY
 
-      - name: Commit new scouting report
+      - name: Commit new scouting report with retry
         run: |
-          git add talent-finder-runs/*-automated-run.json
-          if git diff --cached --quiet; then
-            echo 'FOUT: geen nieuw Talent Finder report.'
-            exit 1
-          fi
+          set -e
           git config user.name 'TalentScout Talent Finder Bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Run automated Talent Finder scouting scan'
-          git push
+          for attempt in 1 2 3 4 5; do
+            git add talent-finder-runs/*-automated-run.json
+            if git diff --cached --quiet; then
+              echo 'FOUT: geen nieuw Talent Finder report.'
+              exit 1
+            fi
+            git commit -m 'Run automated Talent Finder scouting scan' || true
+            if git push origin HEAD:main; then
+              echo "Report succesvol naar GitHub geschreven (poging $attempt)."
+              exit 0
+            fi
+            echo "Push-conflict (poging $attempt); remote wordt opgehaald en report-commit wordt opnieuw gebased."
+            git fetch origin main
+            git rebase origin/main
+            sleep $((attempt * 2))
+          done
+          echo 'FOUT: report kon na 5 pogingen niet naar GitHub worden geschreven.'
+          exit 1
