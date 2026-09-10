@@ -1,0 +1,32 @@
+{
+  "runStartedAt": "2026-09-10T17:01:35+02:00",
+  "runCompletedAt": "2026-09-10T17:03:10+02:00",
+  "status": "blocked_before_candidate_verification",
+  "scanOrder": ["Europe", "Asia", "North America", "South America", "Africa", "Oceania"],
+  "screenedCount": 0,
+  "approvedCount": 0,
+  "rejectedCount": 0,
+  "approvedPlayers": [],
+  "rejectedPlayers": [],
+  "verificationPolicy": {
+    "checksRequired": 7,
+    "majorityRule": "5 of 7 or better",
+    "coreContradictionBlocks": true,
+    "technicalWriteFailureIsNotRejection": true
+  },
+  "sevenCheckVerification": [],
+  "technicalErrors": [
+    {
+      "stage": "candidate discovery and live source verification",
+      "error": "The run environment could not complete fresh multi-source verification across the full continent sequence, so no candidate was published or rejected as a player.",
+      "retryAttempted": true,
+      "writeReportSucceeded": true
+    }
+  ],
+  "preservationCheck": {
+    "existingVerifiedPlayersBefore": 6,
+    "existingVerifiedPlayersAfter": 6,
+    "unexpectedDisappearance": false
+  },
+  "notes": "A unique run-report was written to GitHub even though 0 candidates were processed. Existing valid players were preserved."
+}
