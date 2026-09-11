@@ -1,1 +1,0 @@
-Temporary repair prepared: SofaScore is treated as an optional source during the current outage window and automatically becomes eligible again on 2026-09-12. The Talent Finder must use 5 selected controls from 7 available controls and require at least 3/5, while hard contradictions still block publication.
