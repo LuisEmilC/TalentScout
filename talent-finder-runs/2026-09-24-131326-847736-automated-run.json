@@ -1,0 +1,225 @@
+{
+  "runStartedAt": "2026-09-24T10:16:18.747205+00:00",
+  "runCompletedAt": "2026-09-24T11:13:26.847736+00:00",
+  "status": "completed",
+  "runType": "continuous automated real public-source scouting run",
+  "passesCompleted": 6,
+  "countriesScouted": [
+    "Belgium",
+    "Netherlands",
+    "France",
+    "Germany",
+    "Spain",
+    "Portugal",
+    "Italy",
+    "England",
+    "Turkey",
+    "Japan",
+    "South Korea",
+    "India",
+    "Saudi Arabia",
+    "Australia",
+    "New Zealand",
+    "Argentina",
+    "Brazil",
+    "Chile",
+    "Colombia",
+    "Ecuador",
+    "South Africa",
+    "Nigeria",
+    "Ghana",
+    "Morocco",
+    "Egypt",
+    "Mexico",
+    "Canada",
+    "United States",
+    "Costa Rica",
+    "Uruguay",
+    "Paraguay",
+    "Peru",
+    "Bolivia",
+    "Venezuela",
+    "Switzerland",
+    "Austria",
+    "Denmark",
+    "Sweden",
+    "Norway",
+    "Poland",
+    "Czechia",
+    "Croatia",
+    "Serbia",
+    "Greece",
+    "Romania",
+    "Ukraine",
+    "Georgia",
+    "Israel",
+    "Qatar",
+    "United Arab Emirates",
+    "Thailand",
+    "Indonesia",
+    "Malaysia",
+    "Vietnam",
+    "China",
+    "Iran",
+    "Iraq",
+    "Uzbekistan",
+    "Kazakhstan",
+    "Cameroon",
+    "Senegal",
+    "Ivory Coast",
+    "Algeria",
+    "Tunisia",
+    "Kenya",
+    "Tanzania",
+    "Zambia",
+    "Zimbabwe",
+    "Fiji",
+    "Papua New Guinea",
+    "Samoa",
+    "Tonga"
+  ],
+  "candidatesScreened": 0,
+  "approvedPlayers": [],
+  "rejectedPlayers": [],
+  "runnerErrors": [
+    {
+      "stage": "discovery",
+      "countries": [
+        "Belgium",
+        "Netherlands",
+        "France",
+        "Germany"
+      ],
+      "errorType": "TimeoutError",
+      "error": "The read operation timed out"
+    },
+    {
+      "stage": "discovery",
+      "countries": [
+        "Spain",
+        "Portugal",
+        "Italy",
+        "England"
+      ],
+      "errorType": "TimeoutError",
+      "error": "The read operation timed out"
+    },
+    {
+      "stage": "discovery",
+      "countries": [
+        "Turkey",
+        "Japan",
+        "South Korea",
+        "India"
+      ],
+      "errorType": "TimeoutError",
+      "error": "The read operation timed out"
+    },
+    {
+      "stage": "discovery",
+      "countries": [
+        "Saudi Arabia",
+        "Australia",
+        "New Zealand",
+        "Argentina"
+      ],
+      "errorType": "TimeoutError",
+      "error": "The read operation timed out"
+    },
+    {
+      "stage": "discovery",
+      "countries": [
+        "Brazil",
+        "Chile",
+        "Colombia",
+        "Ecuador"
+      ],
+      "errorType": "TimeoutError",
+      "error": "The read operation timed out"
+    },
+    {
+      "stage": "discovery",
+      "countries": [
+        "South Africa",
+        "Nigeria",
+        "Ghana",
+        "Morocco"
+      ],
+      "errorType": "TimeoutError",
+      "error": "The read operation timed out"
+    }
+  ],
+  "technicalUnresolved": [
+    {
+      "stage": "discovery",
+      "countries": [
+        "Belgium",
+        "Netherlands",
+        "France",
+        "Germany"
+      ],
+      "errorType": "TimeoutError",
+      "error": "The read operation timed out"
+    },
+    {
+      "stage": "discovery",
+      "countries": [
+        "Spain",
+        "Portugal",
+        "Italy",
+        "England"
+      ],
+      "errorType": "TimeoutError",
+      "error": "The read operation timed out"
+    },
+    {
+      "stage": "discovery",
+      "countries": [
+        "Turkey",
+        "Japan",
+        "South Korea",
+        "India"
+      ],
+      "errorType": "TimeoutError",
+      "error": "The read operation timed out"
+    },
+    {
+      "stage": "discovery",
+      "countries": [
+        "Saudi Arabia",
+        "Australia",
+        "New Zealand",
+        "Argentina"
+      ],
+      "errorType": "TimeoutError",
+      "error": "The read operation timed out"
+    },
+    {
+      "stage": "discovery",
+      "countries": [
+        "Brazil",
+        "Chile",
+        "Colombia",
+        "Ecuador"
+      ],
+      "errorType": "TimeoutError",
+      "error": "The read operation timed out"
+    },
+    {
+      "stage": "discovery",
+      "countries": [
+        "South Africa",
+        "Nigeria",
+        "Ghana",
+        "Morocco"
+      ],
+      "errorType": "TimeoutError",
+      "error": "The read operation timed out"
+    }
+  ],
+  "existingPlayersPreserved": true,
+  "unexpectedDeletions": false,
+  "jsonValid": true,
+  "writeVerification": "workflow_run sync-after-talent-finder-run",
+  "verificationPolicy": "Exactly 7 main controls; 5/7, 6/7 or 7/7 may pass; 4/7 or lower is rejected; hard contradictions block; minimum 2 independent public sources; technical source failures are runnerErrors, never player rejections; missing optional statistics never block approval."
+}
